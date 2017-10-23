@@ -2,7 +2,6 @@
 ### Práctica 2.2.3.
 El ejercicio debe contener:
 
-- Títols
 -  Llistes
 -  Enllaços
 - Ressaltat dels conceptes importants dels paràgrafs (negreta)
