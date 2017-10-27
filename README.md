@@ -110,10 +110,10 @@ Att. [Una frase entera que lleva a google :D][google]
 
 Para añadir un texto en cursiva simplemente tenemos que rodear la palabra entre asteriscos(\*)/barras bajas(\_), y para ponerla en negrita simplemente habrá que poner dos asteríscos (\*\*)o dos barras bajas (\_\_):
 ~~~
-- \*cursiva*
-- \_cursiva_
-- \**negrita**
-- \__negrita__
+- *cursiva*
+- _cursiva_
+- **negrita**
+- __negrita__
 ~~~
 
 - *cursiva*
@@ -124,8 +124,8 @@ Para añadir un texto en cursiva simplemente tenemos que rodear la palabra entre
 Además, se pueden combinar para juntar cursiva y negrita:
 
 ~~~
-- \*\**cursiva y negrita***
-- \_\__cursiva y negrita___
+- ***cursiva y negrita***
+- ___cursiva y negrita___
 ~~~
 
 - ***cursiva y negrita***
