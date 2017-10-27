@@ -141,6 +141,10 @@ A lo largo de la práctica he ido escribiendo código que no era afectado por la
 \~~~
 Esto es código :D
 \~~~
+`
+Esto también lo es
+`
+
 ~~~
 
 La contrabarra (\\) es para que lo trate como texto y no como código. De esta forma también se puede escribir  \*\*código\*\* sin que afecte a la sintaxis
