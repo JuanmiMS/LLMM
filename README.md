@@ -36,7 +36,6 @@ Para crear listas **desordenadas** podemos utilizar asteriscos (\*), guiones (\-
 + Linea 3
 ~~~
 Como vemos el resultado no varía
-
 * Linea 1
 - Linea 2
 + Linea 3
@@ -114,12 +113,14 @@ Para añadir un texto en cursiva simplemente tenemos que rodear la palabra entre
 - _cursiva_
 - **negrita**
 - __negrita__
+- ~~tachado~~
 ~~~
 
 - *cursiva*
 - _cursiva_
 - **negrita**
 - __negrita__
+- ~~tachado~~
 
 Además, se pueden combinar para juntar cursiva y negrita:
 
@@ -130,3 +131,20 @@ Además, se pueden combinar para juntar cursiva y negrita:
 
 - ***cursiva y negrita***
 - ___cursiva y negrita___
+- ~~**Texto tachado y en negrita**~
+
+## Code and Syntax Highlighting
+
+A lo largo de la práctica he ido escribiendo código que no era afectado por la sintaxis del markdown, para ello  se tiene que añadir "\~\~~" al principio y al final del código que deseemos mostrar
+
+~~~
+\~~~
+Esto es código :D
+\~~~
+~~~
+
+La contrabarra (\\) es para que lo trate como texto y no como código. De esta forma también se puede escribir  \*\*código\*\* sin que afecte a la sintaxis
+
+~~~
+Esto es código :D
+~~~
