@@ -7,8 +7,7 @@ Para empezar el ejercicio debe contener:
 
 - Listas
 - Enlaces
-- Textos en negrita
-- Cursiva en palabras en el párrafo escrito en otro idioma
+- Textos en negrita y cursiva
 - Code and Syntax Highlighting
 - Tablas
 
@@ -106,3 +105,28 @@ Gracias a [google][google] podemos buscar y encontrar muchísima información qu
 Att. [Una frase entera que lleva a google :D][google]
 
 [google]:http://www.google.es/
+
+## Textos en negrita y en cursiva
+
+Para añadir un texto en cursiva simplemente tenemos que rodear la palabra entre asteriscos(\*)/barras bajas(\_), y para ponerla en negrita simplemente habrá que poner dos asteríscos (\*\*)o dos barras bajas (\_\_):
+~~~
+- \*cursiva*
+- \_cursiva_
+- \**negrita**
+- \__negrita__
+~~~
+
+- *cursiva*
+- _cursiva_
+- **negrita**
+- __negrita__
+
+Además, se pueden combinar para juntar cursiva y negrita:
+
+~~~
+- \*\**cursiva y negrita***
+- \_\__cursiva y negrita___
+~~~
+
+- ***cursiva y negrita***
+- ___cursiva y negrita___
