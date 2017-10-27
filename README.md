@@ -203,4 +203,4 @@ Por último, aunque no sea parte de la práctica, me ha parecido interesante con
 ![Codigo](imagenes/codigosecreto.jpg)
 
 
-Las última imagen no la podemos ver, ya que no está agregada en el repositorio
+La última imagen, código, no la podemos ver, ya que no está agregada en el repositorio
