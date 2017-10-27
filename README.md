@@ -197,14 +197,10 @@ Por último, aunque no sea parte de la práctica, me ha parecido interesante con
 ~~~
 ![Pizza](http://art-depizza.es/wp-content/uploads/2015/12/Pizza-1.jpg "Pizza")
 ![Codigo](imagenes/codigosecreto.jpg)
-![imagen 1][1] ![imagen 2][2]
-[1]: imagenes/patata.png
-[2]: imagenes/menu/lasagna.jpeg
 ~~~
 
 ![Pizza](http://art-depizza.es/wp-content/uploads/2015/12/Pizza-1.jpg "Pizza jugosa")
 ![Codigo](imagenes/codigosecreto.jpg)
-[1]: imagenes/patata.png
-[2]: imagenes/menu/lasagna.jpeg
 
-Las últimas imagenes no las podemos ver, ya que no están agregada en el repositorio
+
+Las última imagen no la podemos ver, ya que no está agregada en el repositorio
