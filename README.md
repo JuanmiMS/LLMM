@@ -80,3 +80,29 @@ Para terminar con las listas podemos crear listas **ordenadas** (las cuales se p
     - Punto 2.1
 3. Punto 3
 
+## Enlaces
+
+Se crean escribiendo el texto entre corchetes seguido del enlace o _link_ entre paréntesis
+~~~
+- [Google](http://www.google.es/)
+- [Random](http://www.theuselessweb.com/)
+~~~
+
+- [Google](http://www.google.es/)
+- [Random](http://www.theuselessweb.com/)
+
+También se pueden asignar palabras clave a una _URL_, de esta manera cada vez que queramos un enlace a dicha web solo tendremos que escribir la palabra clave a la web que deseemos
+
+~~~
+Gracias a [google][google] podemos buscar y encontrar muchísima información que antes era realmente difícil de encontrar. Además haciendo click [aqui][google] el navegador nos redirecciona a su web.
+
+Att. [Una frase entera que lleva a google :D][google]
+
+[google]:http://www.google.es/
+~~~
+
+Gracias a [google][google] podemos buscar y encontrar muchísima información que antes era realmente difícil de encontrar. Además haciendo click [aqui][google] el navegador nos redirecciona a su web.
+
+Att. [Una frase entera que lleva a google :D][google]
+
+[google]:http://www.google.es/
