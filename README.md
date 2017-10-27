@@ -190,3 +190,21 @@ Podemos añadir negrita, cursiva, enlaces, listas e incluso alinear el texto hac
 | :---                           |        :---:           |                              ---:|
 | **Contenido**                  | Contenido              | [Contenido](http://www.google.es)|
 | _Contenido_                    | Contenido              | _Contenido_                      |
+
+##Imágenes
+
+Por último, aunque no sea parte de la práctica, me ha parecido interesante concluir indicando cómo se agregan imágenes. Es muy parecido a los enlaces, solo que hay que añadir el símbolo de exclamación "\!" al principio y _-opcionalmente-_ una descipción al final entre comillas (la cual aparecerá cuando pasemos el ratón por encima
+~~~
+![Pizza](http://art-depizza.es/wp-content/uploads/2015/12/Pizza-1.jpg "Pizza")
+![Codigo](imagenes/codigosecreto.jpg)
+![imagen 1][1] ![imagen 2][2]
+[1]: imagenes/patata.png
+[2]: imagenes/menu/lasagna.jpeg
+~~~
+
+![Pizza](http://art-depizza.es/wp-content/uploads/2015/12/Pizza-1.jpg "Pizza jugosa")
+![Codigo](imagenes/codigosecreto.jpg)
+[1]: imagenes/patata.png
+[2]: imagenes/menu/lasagna.jpeg
+
+Las últimas imagenes no las podemos ver, ya que no están agregada en el repositorio
