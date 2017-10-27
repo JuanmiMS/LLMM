@@ -141,6 +141,7 @@ A lo largo de la práctica he ido escribiendo código que no era afectado por la
 \~~~
 Esto es código :D
 \~~~
+
 `
 Esto también lo es
 `
@@ -152,3 +153,40 @@ La contrabarra (\\) es para que lo trate como texto y no como código. De esta f
 ~~~
 Esto es código :D
 ~~~
+
+`
+Esto también lo es
+`
+
+La diferencia es que si escribimos "\`" HTML lo traduce como `<code>`, y si escribimos \~~~ no. A la hora de crear un documento (como este) no tiene mucha importancia qué etiqueta utilicemos, pero si quieremos crear una página web sí deberíamos tenerlo en cuenta.
+
+##Tablas
+
+Para crear tablas debemos empezar con el carácter "\|" y usarlo como separador. La segunda línea empezará y terminará también con "\|" pero estará ocupada por "\-" para indicar que la primera línea es la cabecera.
+
+~~~~
+| Cabecera 1       | Cabecera 2       |
+| -------------    | -------------    |
+| Contenido celda  | Contenido celda  |
+| Contenido celda  | Contenido celda  |
+~~~~
+Podemos añadir espacios en blanco en la tabla para que sea más legible
+
+| Cabecera 1  | Cabecera 2 |
+| ------------- | ------------- |
+| Contenido celda  | Contenido celda  |
+| Contenido celda  | Contenido celda  |
+
+Podemos añadir negrita, cursiva, enlaces, listas e incluso alinear el texto hacia la izquierda, centro o derecha.
+
+~~~
+| Cabecera 1   A LA IZQUIERDA    | Cabecera 2   CENTRO    | Cabecera 3 A LA DERECHA           |
+| :---                           |        :---:           |                               ---:|
+| \*Contenido*                   | Contenido             | \[Contenido](http://www.google.es) |
+| \_\_Contenido                  | Contenido            | Contenido__                         |
+~~~
+
+| Cabecera 1   A LA IZQUIERDA    | Cabecera 2   CENTRO    | Cabecera 3 A LA DERECHA          |
+| :---                           |        :---:           |                              ---:|
+| **Contenido**                  | Contenido              | [Contenido](http://www.google.es)|
+| _Contenido_                    | Contenido              | _Contenido_                      |
