@@ -120,3 +120,64 @@ html, body {
 .conversation:hover{
     background-color: #d6d6d6;
 }
+
+/* Navigation */
+#navigation {
+        list-style: none;
+        font-family: "Century Gothic", Verdana, Arial, Sans-Serif;
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+}
+
+/* CSS for each Parent Item */
+#navigation li
+{
+        clear: both;
+        height: 2em;
+}
+
+#navigation li a
+{
+        float: left;
+        display: block;
+        padding: 4px;
+        text-decoration: none;
+        color: #666;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        margin-right: 10px;
+}
+
+/* Change background color and font color of parent items when mouse hover */
+#navigation li:hover a,
+#navigation li a:hover
+{
+        background: #999;
+        color: #fff;
+}
+
+/* Applie to group of Child Items Each Child Item will be invisible by default */
+#navigation ul {display: none;}
+
+/* Each Child Item will be visible if mouse hover */
+#navigation li:hover ul {display: block;}
+
+#navigation ul
+{
+        list-style: none;
+        float: left;
+        margin: 0;
+        padding: 4px 8px;
+}
+
+#navigation ul li
+{
+        float: left;
+        clear: none;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+        color: #999;
+}
