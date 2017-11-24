@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<personas>
+	<tipo_persona categoria="Fisica">></tipo_persona>
+	<tipo_persona categoria="Juridica">></tipo_persona>
+</personas>
