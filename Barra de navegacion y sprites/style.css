@@ -1,0 +1,271 @@
+body{
+    background-color: #339999;
+}
+
+#center{
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+a, a:visited {
+    text-decoration:none;
+    outline:none;
+    color:#54a6de;
+}
+
+a:hover{ text-decoration:underline;
+}
+
+section, footer, nav{
+    display: block;
+}
+#colorNav li{
+    padding: 25px;
+}
+#colorNav > ul{
+    margin:0 auto;
+}
+
+#colorNav > ul > li{
+    list-style: none;
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #CCC;
+    display: inline-block;
+    line-height: 1;
+    margin: 1px;
+    border-radius: 3px;
+    position:relative;
+}
+
+#colorNav > ul > li > a{
+    color:inherit;
+    text-decoration:none !important;
+    font-size:24px;
+    padding: 25px;
+}
+
+#colorNav li ul{
+    position:absolute;
+    list-style:none;
+    width:180px;
+    left:50%;
+    margin-left:-90px;
+    top:70px;
+    font:bold 12px 'Open Sans Condensed', sans-serif;
+    max-height:0px;
+    overflow:hidden;
+
+    -webkit-transition:max-height 0.4s linear;
+    -moz-transition:max-height 0.4s linear;
+    transition:max-height 0.4s linear;
+}
+
+#colorNav li ul li{
+    background-color:#313131;
+}
+
+#colorNav li ul li a{
+    padding:12px;
+    color:#fff !important;
+    text-decoration:none !important;
+    display:block;
+}
+
+#colorNav li ul li:nth-child(odd){
+    background-color:#363636;
+}
+
+#colorNav li ul li:hover{
+    background-color:#444;
+}
+
+#colorNav li ul li:first-child{
+    border-radius:3px 3px 0 0;
+    margin-top:25px;
+    position:relative;
+}
+
+#colorNav li ul li:first-child:before{
+    content:'';
+    position:absolute;
+    width:1px;
+    height:1px;
+    border:5px solid transparent;
+    border-bottom-color:#313131;
+    left:50%;
+    top:-10px;
+    margin-left:-5px;
+}
+
+#colorNav li ul li:last-child{
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+}
+#colorNav li:hover ul{
+    max-height:200px;
+}
+
+
+#colorNav li.green{
+    background-color:#00c08b;
+    color:#127a5d;
+}
+#colorNav li.red{background-color:#ea5080;color:#aa2a52;}
+#colorNav li.blue{background-color:#53bfe2;color:#2884a2;}
+#colorNav li.yellow{background-color:#f8c54d;color:#ab8426;}
+#colorNav li.purple{background-color:#df6dc2;color:#9f3c85;}
+#colorNav li.selected{background-color:lightgrey; border-style: solid; border-color: blueviolet}
+
+/*----------------------------------------------------*/
+#left{
+    top: 0%;
+    position: absolute;
+}
+.leftSelected{
+    display: block;
+    width: 150px;
+    height: 140px;
+    background-color:#CFCFCF;
+    background-repeat:no-repeat;
+    background-position:center center;
+    -moz-border-radius:0px 10px 10px 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    margin-left: -50px;
+
+}
+
+.leftNot{
+    list-style: none;
+    margin-left: -30px;
+}
+ul .leftNot  .home a{
+    background-image: url(/imgs/home.png);
+}
+ul .leftNot  .about a      {
+    background-image: url(/imgs/camera-settings-cogwheel.png);
+}
+ul .leftNot  .search a      {
+    background-image: url(/imgs/envelope.png);
+}
+ul .leftNot  .podcasts a      {
+    background-image: url(/imgs/friends.png);
+}
+ul .leftNot.rssfeed a   {
+    background-image: url(/imgs/line-chart.png);
+}
+
+ul .leftNot a {
+    display: block;
+    margin-left: -2px;
+    width: 150px;
+    height: 140px;
+    background-color:#CFCFCF;
+    -moz-border-radius:0px 10px 10px 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+}
+
+li .leftNot {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 10px;
+    left: 0px;
+    list-style: none;
+    z-index:1;
+}
+ul .leftNot{
+    width: 100px;
+}
+ul .leftNot a {
+    display: block;
+    margin-left: -100px;
+    width: 150px;
+    height: 140px;
+    background-color:#CFCFCF;
+    background-repeat:no-repeat;
+    background-position:center center;
+    border:1px solid #AFAFAF;
+}
+
+ul .leftNot a:hover{
+    background-color:#CAE3F2;
+    margin-left: -23px;
+}
+
+/*---------------------------------------------------------------*/
+#up{
+    position: absolute;
+    width: 546px;
+    margin-left: 500px;
+    margin-top: -458px;
+
+}
+
+#nav {
+    background-color: #F5F5F5;
+    border-bottom: 5px solid #333333;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    position: relative;
+    width: 98%;
+    border-radius: 10px 10px 45px 45px;
+    -moz-border-radius: 10px 10px 45px 45px;
+    -webkit-border-radius: 10px 10px 45px 45px;
+    border: 0px solid #000000;
+}
+#nav, #nav ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#nav > li {
+    border-bottom: 5px solid transparent;
+    float: left;
+    margin-bottom: -5px;
+    text-align: left;
+    -moz-transition: all 300ms ease-in-out 0s;
+    -ms-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+}
+#nav li a {
+    display: block;
+    text-decoration: none;
+    -moz-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -ms-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -o-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -webkit-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    white-space: normal;
+}
+#nav > li > a {
+    color: #333333;
+    display: block;
+    font-size: 1.3em;
+    line-height: 49px;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+#nav > li:hover > a, #nav > a:hover {
+    background-color: #F55856;
+    color: #FFFFFF;
+}
+.active{
+    background-color: #F55856;
+}
+/*
+#nav li.active > a {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+*/
+
+
+
