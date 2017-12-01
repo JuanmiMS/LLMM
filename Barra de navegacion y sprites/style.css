@@ -1,6 +1,21 @@
 body{
     background-color: #339999;
 }
+
+.icono{
+    background: url(imgs/iconos.png) #f6e2b9 no-repeat 0 0;
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.icono2{
+    background: url(imgs/iconos.png) #f6e2b9 no-repeat -32px 0;
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
 footer{
 
     position: fixed;
@@ -147,6 +162,7 @@ section, footer, nav{
     margin-top: 200px;
     margin-left: 100px;
 }
+
 #colorNav li.up{
     background-color:#ea5080;
     color:#aa2a52;
@@ -332,7 +348,7 @@ ul .leftNot a:hover{
 
 #right {
     position: absolute;
-    width: 350px;
+    width: 160px;
     margin: 50px auto;
     right: 0%;
     top: 20%;
