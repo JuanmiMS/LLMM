@@ -2,11 +2,12 @@ body{
     background-color: #339999;
 }
 footer{
-    left: 37%;
+
     position: fixed;
     bottom: 0;
     color: white;
     text-align: center;
+    float: right;
  }
 #center{
     position: fixed;
@@ -188,7 +189,7 @@ section, footer, nav{
     display: block;
     width: 150px;
     height: 140px;
-    background-color:#CFCFCF;
+    background-color:pink;
     background-repeat:no-repeat;
     background-position:center center;
     -moz-border-radius:0px 10px 10px 0px;
@@ -264,7 +265,7 @@ ul .leftNot a:hover{
 /*---------------------------------------------------------------*/
 #up{
     position: absolute;
-    width: 546px;
+    width: 464px;
     margin-left: 32%;
     /*margin-top: -458px;*/
 
@@ -330,10 +331,11 @@ ul .leftNot a:hover{
 }
 
 #right {
+    position: absolute;
     width: 350px;
     margin: 50px auto;
-    float: right;
-    top: 30%;
+    right: 0%;
+    top: 20%;
 }
 #right ul {
     list-style: none;
