@@ -8,8 +8,13 @@ body{
     width: 500px;
     height: 510px;
     top: 10%;
-    left: 10%;
+    left: 9%;
     z-index: 9999999999;
+    background-color: #6f6f6f;
+    border-radius: 25px 25px 25px 25px;
+    -moz-border-radius: 25px 25px 25px 25px;
+    -webkit-border-radius: 25px 25px 25px 25px;
+    border: 14px dashed #dbdbdb;
 }
 #texto_ayuda{
 
@@ -33,20 +38,20 @@ body{
     padding: 10px;
     float: left;
 }
-.icono{
-    background: url(imgs/iconos.png) #f6e2b9 no-repeat 0 0;
-    width: 32px;
+.c3po{
+    background: url(imgs/starwars_icons.png) #f6e2b9 no-repeat 0 0;
+    width: 31px;
     height: 32px;
-    display: block;
+    float: left;
 }
-
-.icono2{
-    background: url(imgs/iconos.png) #f6e2b9 no-repeat -32px 0;
-    width: 32px;
+.ewook{
+    background: url(imgs/starwars_icons.png) #f6e2b9 no-repeat -31px 0;
+    width: 31px;
     height: 32px;
-    display: block;
+    float: right;
+    margin-top: -35px;
+    left: 0;
 }
-
 footer{
 
     position: fixed;
@@ -63,34 +68,6 @@ footer{
     height: 500px;
     margin-left: -300px;
     margin-top: -200px;
-}
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
-}
-
-.fa-google {
-    background: #dd4b39;
-    color: white;
 }
 
 a, a:visited {
@@ -151,39 +128,6 @@ section, footer, nav{
     display:block;
 }
 
-#colorNav li ul li:nth-child(odd){
-    background-color:#363636;
-}
-
-#colorNav li ul li:hover{
-    background-color:#444;
-}
-
-#colorNav li ul li:first-child{
-    border-radius:3px 3px 0 0;
-    margin-top:25px;
-    position:relative;
-}
-
-#colorNav li ul li:first-child:before{
-    content:'';
-    position:absolute;
-    width:1px;
-    height:1px;
-    border:5px solid transparent;
-    border-bottom-color:#313131;
-    left:50%;
-    top:-10px;
-    margin-left:-5px;
-}
-
-#colorNav li ul li:last-child{
-    border-bottom-left-radius:3px;
-    border-bottom-right-radius:3px;
-}
-#colorNav li:hover ul{
-    max-height:200px;
-}
 
 
 #colorNav li.center{
@@ -381,7 +325,7 @@ ul .leftNot a:hover{
     position: absolute;
     width: 160px;
     margin: 50px auto;
-    right: 0%;
+    right: 0px;
     top: 20%;
 }
 #right ul {
@@ -600,3 +544,42 @@ ul .leftNot a:hover{
 .slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
 .slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 100%; }
 
+/*Footer*/
+.social-media-icons {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.social-media-icons li {
+    display: inline-block;
+}
+
+.social-media-icons a {
+    background-image: url(imgs/social-icons.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 58px;
+    transition: all 350ms ease-out;
+    -webkit-transition: all 350ms ease-out;
+    -o-transition: all 350ms ease-out;
+    width: 50px;
+}
+
+.twitter {background-position: 0 0;}
+.facebook {background-position: -53px 0;}
+.dribbble {background-position: -106px 0;}
+.pinterest {background-position: -159px 0;}
+.deviantart {background-position: -212px 0;}
+
+.zeta{background-position: 0 -60px;}
+.rss{background-position: -53px -60px;}
+.google{background-position: -106px -60px;}
+.flickr{background-position: -159px -60px;}
+.veta{background-position: -212px -60px;}
+
+.be{background-position: 0 -120px;}
+.youtube{background-position: -53px -120px;}
+.tumblr{background-position: -106px -120px;}
+.go{background-position: -159px -120px;}
+.wordpress{background-position: -212px -120px;}
