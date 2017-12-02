@@ -2,6 +2,37 @@ body{
     background-color: #339999;
 }
 
+#ayuda{
+
+    position: absolute;
+    width: 500px;
+    height: 510px;
+    top: 10%;
+    left: 10%;
+    z-index: 9999999999;
+}
+#texto_ayuda{
+
+    background-color: white;
+    padding: 10px;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    margin-left: 32px;
+    float: left;
+    top: 3%;
+    border-radius: 15px;
+}
+#texto_ayuda p{
+    margin-top: 0px;
+    float: left;
+}
+#ayuda img{
+    width: 100px;
+    margin-top: 250px;
+    padding: 10px;
+    float: left;
+}
 .icono{
     background: url(imgs/iconos.png) #f6e2b9 no-repeat 0 0;
     width: 32px;
