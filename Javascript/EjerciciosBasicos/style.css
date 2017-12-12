@@ -5,6 +5,10 @@ body{
 table{
     width: 0%;
     margin: 0 auto;
+    margin-top: 100px;
+    padding: 50px;
+    border-radius: 15px;
+    background-color: gainsboro;
 }
 table tr td {
     padding: 5px;
@@ -15,4 +19,19 @@ table tr td {
     border: solid;
     border-color: #00FF00;
     cursor: help;
+    background-color: white;
+}
+
+.ddimgtooltip{
+    box-shadow: 3px 3px 5px #818181; /*shadow for CSS3 capable browsers.*/
+    -webkit-box-shadow: 3px 3px 5px #818181;
+    -moz-box-shadow: 3px 3px 5px #818181;
+    display:none;
+    position:absolute;
+    border:1px solid black;
+    background:white;
+    color: black;
+    z-index:2000;
+    padding: 4px;
+
 }

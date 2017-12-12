@@ -8,12 +8,12 @@ function getRandomColor() {
     return color;
 }
 
-function randomBgColor() {
+/*function randomBgColor() {
         var color = getRandomColor();
-        document.body.style.backgroundColor = color;
-}
+        //document.body.style.backgroundColor = color;
+}*/
 
 function changecolor() {
-    var color = getRandomColor();
-    document.getElementById("tabla").style.backgroundColor = color;
+    document.body.style.backgroundColor = getRandomColor();
+    document.getElementsByClassName("celda").style.backgroundColor = getRandomColor();
 }
