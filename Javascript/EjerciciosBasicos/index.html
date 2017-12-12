@@ -10,6 +10,8 @@
 
 </head>
 <body>
+<!--Poner las asignaturas arriba del tódo y cuando se haga click que se iluminen los recuadros
+de la asignatura-->
 <table id="tabla">
     <tr>
         <td>&nbsp;</td>
@@ -52,7 +54,7 @@
         <td class='celda' rel="imgtip[0]">18.45-19.30</td>
         <td rowspan="2" class='celda' rel="imgtip[1]">Refuerzo LLMM</td>
         <td class='celda'>hey</td>
-        <td rowspan="2" class='celda'>Refuerzo programación</td>
+        <td rowspan="2" class='celda' onmouseenter="btnClick()">Refuerzo programación</td>
         <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
@@ -62,6 +64,6 @@
     </tr>
 </table>
 <button onclick="changecolor()">Click me</button>
-<button onclick="wait()">Click me2</button>
+<button onclick="btnClick()">Click me2</button>
 </body>
 </html>

@@ -5,7 +5,7 @@ body{
 table{
     width: 0%;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 50px;
     border-radius: 15px;
     background-color: gainsboro;
@@ -20,6 +20,10 @@ table tr td {
     border-color: #00FF00;
     cursor: help;
     background-color: white;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin: 2px;
 }
 
 .ddimgtooltip{

@@ -14,7 +14,7 @@ var ddimgtooltip={
 		//For CSS object, follow the syntax: {property1:"cssvalue1", property2:"cssvalue2", etc}
 
 		tooltips[0]=["img/reloj.png", "Horario. Todas las sesiones de clase duran 45 min.", {background:"#FFFFFF", color:"black", border:"5px ridge darkblue"}]
-		tooltips[1]=["img/web.png", "Profesor: Rafa. \n Asignatura: Lenguaje de Marcas.", {background:"white", font:"bold 12px Arial"}]
+		tooltips[1]=["img/web.png", "Profesor: Rafa. <br> Asignatura: Lenguaje de Marcas.", {background:"white", font:"bold 12px Arial"}]
 
 		return tooltips //do not remove/change this line
 	}(),
