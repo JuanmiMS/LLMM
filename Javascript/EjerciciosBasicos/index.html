@@ -53,6 +53,7 @@
 
             /*Segunda tabla con nombres*/
             $('.david').mouseover(function() {
+                $('.david').css("background-color","#b635d6");
                 $('.prog').css("background-color","#b635d6");
                 $('.tuto').css("background-color","#fffab5");
                 $('.llmm').css("color","white");
@@ -61,6 +62,7 @@
                 $('.ssii').css("color","white");
             });
             $('.david').mouseout(function() {
+                $('.david').css("background-color","white");
                 $('.prog').css("background-color","white");
                 $('.tuto').css("background-color","white");
                 $('.llmm').css("color","black");
@@ -69,6 +71,7 @@
                 $('.ssii').css("color","black");
             });
             $('.rafa').mouseover(function() {
+                $('.rafa').css("background-color","#efc0f9");
                 $('.llmm').css("background-color","#efc0f9");
                 $('.prog').css("color","white");
                 $('.tuto').css("color","white");
@@ -77,6 +80,7 @@
                 $('.ssii').css("color","white");
             });
             $('.rafa').mouseout(function() {
+                $('.rafa').css("background-color","white");
                 $('.llmm').css("background-color","white");
                 $('.prog').css("color","black");
                 $('.tuto').css("color","black");
@@ -85,6 +89,7 @@
                 $('.ssii').css("color","black");
             });
             $('.jaume').mouseover(function() {
+                $('.jaume').css("background-color","#7c14bc");
                 $('.bbdd').css("background-color","#7c14bc");
                 $('.llmm').css("color","white");
                 $('.tuto').css("color","white");
@@ -93,6 +98,7 @@
                 $('.ssii').css("color","white");
             });
             $('.jaume').mouseout(function() {
+                $('.jaume').css("background-color","white");
                 $('.bbdd').css("background-color","white");
                 $('.llmm').css("color","black");
                 $('.tuto').css("color","black");
@@ -101,6 +107,7 @@
                 $('.ssii').css("color","black");
             });
             $('.ramon').mouseover(function() {
+                $('.ramon').css("background-color","#c8ff7c");
                 $('.ssii').css("background-color","#c8ff7c");
                 $('.llmm').css("color","white");
                 $('.tuto').css("color","white");
@@ -109,6 +116,7 @@
                 $('.prog').css("color","white");
             });
             $('.ramon').mouseout(function() {
+                $('.ramon').css("background-color","white");
                 $('.ssii').css("background-color","white");
                 $('.llmm').css("color","black");
                 $('.tuto').css("color","black");
@@ -117,6 +125,7 @@
                 $('.prog').css("color","black");
             });
             $('.mcgonagall').mouseover(function() {
+                $('.mcgonagall').css("background-color","#a0a0a0");
                 $('.fol').css("background-color","#a0a0a0");
                 $('.llmm').css("color","white");
                 $('.tuto').css("color","white");
@@ -125,6 +134,7 @@
                 $('.ssii').css("color","white");
             });
             $('.mcgonagall').mouseout(function() {
+                $('.mcgonagall').css("background-color","white");
                 $('.fol').css("background-color","white");
                 $('.llmm').css("color","black");
                 $('.tuto').css("color","black");
@@ -144,8 +154,10 @@
 
 </head>
 <body>
+<h1 style="margin: 0 auto;">Horario DAW 2017-2018</h1>
 <div id="blackscreen" style="opacity: 0.9;" onclick="blackscreen()">
-    <img src="img/fol.jpg">
+    <img src="img/info.png">
+    <img style="position: absolute; margin-left: -350px;margin-top: 320px;" src="img/pulsar.png">
 
 </div>
 <table id="tabla">
@@ -191,16 +203,14 @@
         <td rowspan="2" class='celda llmm' rel="imgtip[2]">Refuerzo LLMM</td>
         <td class='celda tuto' rel="imgtip[10]">Tutoria</td>
         <td rowspan="2" class='celda prog' rel="imgtip[6]">Refuerzo programación</td>
-        <td colspan="2">&nbsp;</td>
+
     </tr>
     <tr>
         <td rel="imgtip[0]" class='celda'>19.30-20.15</td>
-        <td colspan="2"></td>
-        <td colspan="2"></td>
     </tr>
 </table>
 <button onclick="changecolor()">Click me</button>
-<table style="margin-top: -10px">
+<table id="profesores" style="margin-top: -10px">
     <tr>
         <td class="celda david">David</td>
         <td class="celda rafa">Rafa</td>

@@ -11,6 +11,5 @@ function getRandomColor() {
     }
     return color;
 }
-//alert('Javascript loaded!');
 
 
