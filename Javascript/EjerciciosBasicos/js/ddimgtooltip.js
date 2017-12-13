@@ -13,9 +13,17 @@ var ddimgtooltip={
 		//For desc parameter, backslash any special characters inside your text such as apotrophes ('). Example: "I\'m the king of the world"
 		//For CSS object, follow the syntax: {property1:"cssvalue1", property2:"cssvalue2", etc}
 
-		tooltips[0]=["img/reloj.png", "Horario. Todas las sesiones de clase duran 45 min.", {background:"#FFFFFF", color:"black", border:"5px ridge darkblue"}]
-		tooltips[1]=["img/web.png", "Profesor: Rafa. <br> Asignatura: Lenguaje de Marcas.", {background:"white", font:"bold 12px Arial"}]
-
+		tooltips[0]=["img/reloj.png", "Horario. Todas las sesiones de clase duran 45 min.", {background:"#FFFFFF", color:"black", border:"5px ridge darkblue"}];
+		tooltips[1]=["img/web.png", "Asignatura: Lenguaje de Marcas.<br>Profesor: Rafa. ", {background:"white", font:"bold 12px Arial"}];
+        tooltips[2]=["img/web.png","Asignatura: Refuerzo Lenguaje de Marcas .<br>Profesor: Rafa. ",{background:"white", font:"bold 12px Arial"}];
+        tooltips[3]=["img/web.png","Asignatura: Base de datos.<br>Profesor: Jaume. ",{background:"white", font:"bold 12px Arial"}];
+        tooltips[4]=["img/web.png","Asignatura: Base de datos en inglés.<br>Profesor: Jaume. ",{background:"white", font:"bold 12px Arial"}];
+        tooltips[5]=["img/web.png","Asignatura: Programación.<br>Profesor: David. ",{background:"white", font:"bold 12px Arial"}];
+        tooltips[6]=["img/web.png","Asignatura: Refuerzo programación.<br>Profesor: David. ",{background:"white", font:"bold 12px Arial"}];
+        tooltips[7]=["img/web.png","Asignatura: Entornos de desarrollo.<br>Profesor: David. ",{background:"white", font:"bold 12px Arial"}];
+        tooltips[8]=["img/web.png","Asignatura: Sistemas informáticos.<br>Profesor: Ramón. ",{background:"white", font:"bold 12px Arial"}];
+        tooltips[9]=["img/fol.jpg","Asignatura: Formación y orientación laboral.<br>Profesor: Profesora Mcgonagall. ",{background:"white", font:"bold 12px Arial"}];
+        tooltips[10]=["img/fol.jpg","Asignatura: Tutoría.<br>Profesor: David. ",{background:"white", font:"bold 12px Arial"}];
 		return tooltips //do not remove/change this line
 	}(),
 

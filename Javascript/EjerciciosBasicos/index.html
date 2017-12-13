@@ -2,11 +2,136 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="javascript.js"></script>
+    <script src="js/javascript.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script type="text/javascript" src="ddimgtooltip.js"></script>
+    <script type="text/javascript" src="js/ddimgtooltip.js"></script>
     <title>Practica 5</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+        $(function(){
+            $('.ssii').mouseover(function() {
+                $(this).css("background-color","#c8ff7c");
+            });
+            $('.ssii').mouseout(function() {
+                $(this).css("background-color","white");
+            });
+            $('.bbdd').mouseover(function() {
+                $(this).css("background-color","#7c14bc");
+            });
+            $('.bbdd').mouseout(function() {
+                $(this).css("background-color","white");
+            });
+            $('.prog').mouseover(function() {
+                $(this).css("background-color","#b635d6");
+            });
+            $('.prog').mouseout(function() {
+                $(this).css("background-color","white");
+            });
+            $('.llmm').mouseover(function() {
+                $(this).css("background-color","#efc0f9");
+            });
+            $('.llmm').mouseout(function() {
+                $(this).css("background-color","white");
+            });
+            $('.fol').mouseover(function() {
+                $(this).css("background-color","#a0a0a0");
+            });
+            $('.fol').mouseout(function() {
+                $(this).css("background-color","white");
+            });
+            $('.tuto').mouseover(function() {
+                $(this).css("background-color","#fffab5");
+            });
+            $('.tuto').mouseout(function() {
+                $(this).css("background-color","white");
+            });
+
+            /*Segunda tabla con nombres*/
+            $('.david').mouseover(function() {
+                $('.prog').css("background-color","#b635d6");
+                $('.tuto').css("background-color","#fffab5");
+                $('.llmm').css("color","white");
+                $('.bbdd').css("color","white");
+                $('.fol').css("color","white");
+                $('.ssii').css("color","white");
+            });
+            $('.david').mouseout(function() {
+                $('.prog').css("background-color","white");
+                $('.tuto').css("background-color","white");
+                $('.llmm').css("color","black");
+                $('.bbdd').css("color","black");
+                $('.fol').css("color","black");
+                $('.ssii').css("color","black");
+            });
+            $('.rafa').mouseover(function() {
+                $('.llmm').css("background-color","#efc0f9");
+                $('.prog').css("color","white");
+                $('.tuto').css("color","white");
+                $('.bbdd').css("color","white");
+                $('.fol').css("color","white");
+                $('.ssii').css("color","white");
+            });
+            $('.rafa').mouseout(function() {
+                $('.llmm').css("background-color","white");
+                $('.prog').css("color","black");
+                $('.tuto').css("color","black");
+                $('.bbdd').css("color","black");
+                $('.fol').css("color","black");
+                $('.ssii').css("color","black");
+            });
+            $('.jaume').mouseover(function() {
+                $('.bbdd').css("background-color","#7c14bc");
+                $('.llmm').css("color","white");
+                $('.tuto').css("color","white");
+                $('.prog').css("color","white");
+                $('.fol').css("color","white");
+                $('.ssii').css("color","white");
+            });
+            $('.jaume').mouseout(function() {
+                $('.bbdd').css("background-color","white");
+                $('.llmm').css("color","black");
+                $('.tuto').css("color","black");
+                $('.prog').css("color","black");
+                $('.fol').css("color","black");
+                $('.ssii').css("color","black");
+            });
+            $('.ramon').mouseover(function() {
+                $('.ssii').css("background-color","#c8ff7c");
+                $('.llmm').css("color","white");
+                $('.tuto').css("color","white");
+                $('.bbdd').css("color","white");
+                $('.fol').css("color","white");
+                $('.prog').css("color","white");
+            });
+            $('.ramon').mouseout(function() {
+                $('.ssii').css("background-color","white");
+                $('.llmm').css("color","black");
+                $('.tuto').css("color","black");
+                $('.bbdd').css("color","black");
+                $('.fol').css("color","black");
+                $('.prog').css("color","black");
+            });
+            $('.mcgonagall').mouseover(function() {
+                $('.fol').css("background-color","#a0a0a0");
+                $('.llmm').css("color","white");
+                $('.tuto').css("color","white");
+                $('.bbdd').css("color","white");
+                $('.prog').css("color","white");
+                $('.ssii').css("color","white");
+            });
+            $('.mcgonagall').mouseout(function() {
+                $('.fol').css("background-color","white");
+                $('.llmm').css("color","black");
+                $('.tuto').css("color","black");
+                $('.bbdd').css("color","black");
+                $('.prog').css("color","black");
+                $('.ssii').css("color","black");
+            });
+
+        });
+    </script>
+
+
 
 </head>
 <body>
@@ -23,27 +148,27 @@ de la asignatura-->
     </tr>
     <tr>
         <td class='celda' rel="imgtip[0]">15.45-16.30</td>
-        <td class='celda'>BBDD(Inglés)</td>
-        <td class='celda'>SI</td>
-        <td class='celda'>SI</td>
-        <td class='celda'>Programación</td>
-        <td class='celda'>BBDD</td>
+        <td class='celda bbdd' rel="imgtip[4]">BBDD(Inglés)</td>
+        <td class='celda ssii' rel="imgtip[8]">SI</td>
+        <td class='celda ssii' rel="imgtip[8]">SI</td>
+        <td class='celda prog' rel="imgtip[5]">Programación</td>
+        <td class='celda bbdd' rel="imgtip[3]">BBDD</td>
     </tr>
     <tr>
         <td class='celda' rel="imgtip[0]">16.30-17.15</td>
-        <td class='celda' rel="imgtip[1]">LLMM</td>
-        <td class='celda'>ED</td>
-        <td class='celda'>FOL</td>
-        <td class='celda'>Programación</td>
-        <td class='celda'>BBDD</td>
+        <td class='celda llmm' rel="imgtip[1]">LLMM</td>
+        <td class='celda prog' rel="imgtip[7]">ED</td>
+        <td class='celda fol' rel="imgtip[9]">FOL</td>
+        <td class='celda prog' rel="imgtip[5]">Programación</td>
+        <td class='celda bbdd' rel="imgtip[3]">BBDD</td>
     </tr>
     <tr>
         <td class='celda' rel="imgtip[0]">17.15-18.30</td>
-        <td class='celda' rel="imgtip[1]">LLMM</td>
-        <td class='celda'>Programación</td>
-        <td class='celda'>FOL</td>
-        <td class='celda'>Programación</td>
-        <td class='celda'>BBDD</td>
+        <td class='celda llmm' rel="imgtip[1]">LLMM</td>
+        <td class='celda prog' rel="imgtip[5]">Programación</td>
+        <td class='celda fol' rel="imgtip[9]">FOL</td>
+        <td class='celda prog' rel="imgtip[5]">Programación</td>
+        <td class='celda bbdd' rel="imgtip[3]">BBDD</td>
     </tr>
     <tr>
         <td class='celda' rel="imgtip[0]">18.30-18.45</td>
@@ -52,18 +177,26 @@ de la asignatura-->
     </tr>
     <tr>
         <td class='celda' rel="imgtip[0]">18.45-19.30</td>
-        <td rowspan="2" class='celda' rel="imgtip[1]">Refuerzo LLMM</td>
-        <td class='celda'>hey</td>
-        <td rowspan="2" class='celda' onmouseenter="btnClick()">Refuerzo programación</td>
+        <td rowspan="2" class='celda llmm' rel="imgtip[2]">Refuerzo LLMM</td>
+        <td class='celda tuto' rel="imgtip[10]">Tutoria</td>
+        <td rowspan="2" class='celda prog' rel="imgtip[6]">Refuerzo programación</td>
         <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
         <td rel="imgtip[0]" class='celda'>19.30-20.15</td>
         <td colspan="2"></td>
-        <td colspan="2">&nbsp;</td>
+        <td colspan="2"></td>
     </tr>
 </table>
 <button onclick="changecolor()">Click me</button>
-<button onclick="btnClick()">Click me2</button>
+<table style="margin-top: -10px">
+    <tr>
+        <td class="celda david">David</td>
+        <td class="celda rafa">Rafa</td>
+        <td class="celda jaume">Jaume</td>
+        <td class="celda ramon">Ramon</td>
+        <td class="celda mcgonagall">Mcgonagall</td>
+    </tr>
+</table>
 </body>
 </html>
