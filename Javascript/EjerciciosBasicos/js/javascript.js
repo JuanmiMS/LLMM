@@ -1,4 +1,8 @@
-//alert('Page loaded!');
+function click() {
+    alert("No deberías copiar el trabajo de los demás...")
+    return false;
+}
+
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -7,9 +11,6 @@ function getRandomColor() {
     }
     return color;
 }
+//alert('Javascript loaded!');
 
-function changecolor() {
-    document.body.style.backgroundColor = getRandomColor();
-    document.getElementsByClassName("celda").style.backgroundColor = getRandomColor();
-}
 

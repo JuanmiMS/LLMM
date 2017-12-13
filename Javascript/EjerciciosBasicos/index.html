@@ -8,6 +8,11 @@
     <title>Practica 5</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript">
+
+        function blackscreen() {
+            document.getElementById('blackscreen').style.display='none';
+        }
+
         $(function(){
             $('.ssii').mouseover(function() {
                 $(this).css("background-color","#c8ff7c");
@@ -130,13 +135,19 @@
 
         });
     </script>
+    <SCRIPT language=JavaScript>
+        //document.onmousedown=click
+        document.oncontextmenu = click;
 
+    </SCRIPT>
 
 
 </head>
 <body>
-<!--Poner las asignaturas arriba del tódo y cuando se haga click que se iluminen los recuadros
-de la asignatura-->
+<div id="blackscreen" style="opacity: 0.9;" onclick="blackscreen()">
+    <img src="img/fol.jpg">
+
+</div>
 <table id="tabla">
     <tr>
         <td>&nbsp;</td>
