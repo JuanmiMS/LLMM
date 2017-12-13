@@ -14,22 +14,44 @@ body{
     z-index: 9999;
 }
 
-table{
+#tabla{
+     width: 0%;
+     margin: 0 auto;
+     margin-top: 50px;
+     padding: 50px;
+     border-radius: 15px;
+     background-color: gainsboro;
+ }
+table tr td {
+    padding: 5px;
+}
+
+#tabla .celda {
+    border-width: 1px;
+    border: solid;
+    border-color: darkslategrey;
+    cursor: help;
+    background-color: white;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin: 2px;
+}
+
+#profesores{
     width: 0%;
     margin: 0 auto;
     margin-top: 50px;
-    padding: 50px;
     border-radius: 15px;
-    background-color: gainsboro;
 }
 table tr td {
     padding: 5px;
 }
 
-.celda {
+#profesores .celda {
     border-width: 1px;
     border: solid;
-    border-color: #00FF00;
+    border-color: darkslategrey;
     cursor: pointer;
     background-color: white;
     text-align: center;

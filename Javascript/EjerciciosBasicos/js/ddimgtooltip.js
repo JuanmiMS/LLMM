@@ -8,7 +8,7 @@
 var ddimgtooltip={
 
 	tiparray:function(){
-		var tooltips=[]
+		var tooltips=[];
 		//define each tooltip below: tooltip[inc]=['path_to_image', 'optional desc', optional_CSS_object]
 		//For desc parameter, backslash any special characters inside your text such as apotrophes ('). Example: "I\'m the king of the world"
 		//For CSS object, follow the syntax: {property1:"cssvalue1", property2:"cssvalue2", etc}
