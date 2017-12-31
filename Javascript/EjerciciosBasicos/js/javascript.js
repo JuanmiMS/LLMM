@@ -26,58 +26,70 @@ function info(asignatura) {
 
     if (asignatura === 'celda ssii'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "Sistemas";
+        rutaTexto.innerHTML = "Sistemas Digitales: asignatura donde se practican los comandos de windows & Linux.";
 
     }
     else if (asignatura === 'celda prog'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "Programacion";
+        rutaTexto.innerHTML = "Programación: estudio de la POO con Python y Java";
     }
     else if (asignatura === 'celda llmm'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "Lenguaje de marcas";
+        rutaTexto.innerHTML = "Lenguaje de marcas: la mejor asignatura del FP. Viva Valencia y sus paellas.";
     }
     else if (asignatura === 'celda fol'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "FOL";
+        rutaTexto.innerHTML = "Datos desconocidos. Se dice que salen grandes empresarios...";
     }
     else if (asignatura === 'celda bbdd'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "Base de datos";
+        rutaTexto.innerHTML = "Base de datos: creación y administración de base de datos";
     }
     else if (asignatura === 'celda tuto'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "Tutoria";
+        rutaTexto.innerHTML = "Tutoria.";
     }
-    else if (asignatura === 'celda descanso'){
-        rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "Descanso";
-    }
+
     /*Profesores*/
     else if (asignatura === 'celda descanso'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "Descanso";
+        rutaTexto.innerHTML = "Un momento para relajarse y estar traquilos.";
     }
     else if (asignatura === 'celda david'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "david";
+        rutaTexto.innerHTML = "Nombre: David Gelpi Fleta<br>" +
+                              "Asignaturas: Programación, ED y Tutoría <br>" +
+                              "Conocido por: tener una relación con Linus Torvalds.";
     }
     else if (asignatura === 'celda rafa'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "rafa";
+        rutaTexto.innerHTML = "Nombre: Rafael Gion Muñoz <br>" +
+                              "Asignaturas: Lenguaje de marca <br>" +
+                              "Conocido por: ser el mejor profesor del mundo";
     }
     else if (asignatura === 'celda jaume'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "jaume";
+        rutaTexto.innerHTML = "Nombre: Jaume Oliver Lafont <br>" +
+                              "Asignaturas: Base de datos <br>" +
+                              "Conocido por: dar las clases en 3 idiomas";
     }
     else if (asignatura === 'celda ramon'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "ramon";
+        rutaTexto.innerHTML = "Nombre: Ramón Jaume Vidal <br>" +
+                              "Asignaturas: Sistemas informáticos <br>" +
+                              "Conocido por: Windows lover";
     }
     else if (asignatura === 'celda mcgonagall'){
         rutaDesc.style.display = 'block';
-        rutaTexto.innerHTML = "mcgonagall";
+        rutaTexto.innerHTML = "Nombre: desconocido<br>" +
+            "Asignaturas: Fol <br>" +
+            "Conocido por: desconocido";
     }
+    else if (asignatura === 'celda'){
+        rutaDesc.style.display = 'block';
+        rutaTexto.innerHTML = "Horario/Día de la semana. Nada más que añadir"
+    }
+
     else{
         alert('Error')
     }
