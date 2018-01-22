@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <title>HTML Tutorial</title>
+    <title>PreExamen</title>
     <script src="js/javascript.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,13 +11,15 @@
 <body>
 
     <div id="top_menu">
-        <a class="menu" href="index.html">Home</a>
-        <a class="menu" href="index.html">Noticias</a>
-        <a class="menu" href="index.html">Nosotros</a>
-        <div class="submenu">
-            <a href="#">Historia</a>
-            <a href="#">Valores</a>
-            <a href="#">Contacto</a>
+        <a class="menu" href="#">Home</a>
+        <a class="menu" href="#">Noticias</a>
+        <div class="dropdown">
+        <a class="menu" href="#">Nosotros</a>
+            <div class="dropdown-content">
+                <a href="#">Historia</a>
+                <a href="#">Valores</a>
+                <a href="#">Contacto</a>
+            </div>
         </div>
     </div>
 
@@ -25,34 +27,34 @@
     <div id="cuerpo">
         <div id="menu_lateral">
             <b>Menu lateral</b>
-            <a class="menu" href="index.html">Campamentos</a>
-            <br>
-            <a class="menu" href="index.html">Circuitos</a>
-            <a class="menu" href="index.html">Equipamiento</a>
-            <a class="menu" href="index.html">Mapas personalizados</a>
-            <a class="menu" href="index.html">Catálogo de dinosaurios</a>
-            <a class="menu" href="index.html">Checklist del equipamiento</a>
+            <a class="menu" href="#">Campamentos</a>
+            <a class="menu" href="#">Circuitos</a>
+            <a class="menu" href="#">Equipamiento</a>
+            <a class="menu" href="#">Mapas personalizados</a>
+            <a class="menu" href="#">Catálogo de dinosaurios</a>
+            <a class="menu" href="#">Checklist del equipamiento</a>
 
         </div>
         <div class="noticia">
-            <div class="titulo">Informatica y comunicaciones</div>
-            <div class="cuerpo">
-                    <div class="subtitulo">¿Qué son las media querys?</div>
+            <div class="titulo" onclick="aparecer()">Informatica y comunicaciones</div>
+            <div id="primera_noticia_texto" class="cuerpo">
+                <div class="subtitulo">¿Qué son las media querys?</div>
                 <p> Las media queries son una sintaxis especial para CSS que nos permite definir unos estilos que solo se aplicarán
                     en el caso de que se cumplan unas condiciones definidas. Podemos asimilarlos a unas líneas de código
                     opcional, que sólo se mostrarán para algunos usuarios o dispositivos.
                 </p>
 
-                <img src="img/img-main.png">
+                <img alt="media query" src="img/img-main.png">
 
-                <p>
-                    <h3>Media query CSS Media queries y diseño responsive. La revolución del diseño web móvil.</h3>
-                </p>
+
+                <h3>Media query CSS Media queries y diseño responsive. La revolución del diseño web móvil.</h3>
+
                 <p>
                     En un momento donde el tráfico móvil se multiplica cada año, ya no servían las webs estáticas diseñadas para mostrarse en
                     una resolución concreta (¿recuerdas aquello de web diseñada para mostrarse en 600px x 480px?). Era necesario
                     adaptar los diseños a unas dimensiones concretas para que el usuario recibiera la información web en
-                    su dispositivo sin tener de hacer zoom para leer los textos.</p>
+                    su dispositivo sin tener de hacer zoom para leer los textos.
+                </p>
 
                 <p>En este momento surgen dos modos de trabajar. La primera abogaba por tener dos versiones de la misma web,
                     una para escritorio y otra para móvil. En la mayoría de los casos no están conectadas entre sí. Esto
@@ -62,7 +64,8 @@
 
                 <p>La segunda forma de trabajar es usar un mismo diseño para ambas resoluciones. Un diseño que se pudiera adaptar
                     a unas determinadas resoluciones o ser flexible en su totalidad, independientemente del contenido y diseño
-                    que tuvieran. A esta nueva forma de trabajar se le denominó diseño web responsive.</p>
+                    que tuvieran. A esta nueva forma de trabajar se le denominó diseño web responsive.
+                </p>
 
                 <p>Y como el encargado del diseño en la web es el CSS, surgió un nuevo elemento capaz de incorporar esta flexibilidad
                     a la hoja de estilos: las media queries, que pueden abarcar porciones de código que sólo se aplicarán
@@ -75,14 +78,14 @@
             <div class="titulo">Investgacion y ecologia</div>
             <div class="cuerpo">
                 <p>
-                        <div class="subtitulo">Un análisis de sangre podría detectar ocho tipos de cáncer</div>
+                    <div class="subtitulo">Un análisis de sangre podría detectar ocho tipos de cáncer</div>
                     <p>Científicos de la Universidad Johns Hopkins de Estados Unidos han elaborado una prueba, denominada CancerSEEK,
                         que podría suponer un importante avance en la lucha contra el cáncer. El trabajo, publicado en la
                         revista Science, aún no ha sido testado ni validado, pero esta
                         <b>investigación podría ser capaz de detectar ocho tipos de cáncer a partir de un análisis</b> de sangre:
                         mama, colorrectal, pulmón, ovario, hígado, estómago, páncreas y esófago.</p>
 
-                    <img src="img/celula.jpg">
+                    <img alt="celula" src="img/celula.jpg">
 
                     <p>Celulas investigación El test podría ayudar a reducir el número de falsos positivos – la exploración
                         que indica una enfermedad cuando en realidad no existe – y contribuir a una mayor detección precoz
@@ -96,7 +99,14 @@
             </div>
         </div>
     </div>
-
+    <footer>
+        <div id="menu_bot">
+            <a class="menu" href="#">Nuestras noticias</a>
+            <a class="menu" href="#">Sobre nosotros</a>
+            <a class="menu" href="#">Contacto</a>
+            <a class="menu" href="#">Otros</a>
+        </div>
+    </footer>
 
 </body>
 
