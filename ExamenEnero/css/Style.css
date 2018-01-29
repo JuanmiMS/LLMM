@@ -1,6 +1,7 @@
 body{
  width: 1300px;
  margin: 0 auto;
+ background-image: url("../imgs/bg.png");
 }
 
 #titulo{
@@ -71,4 +72,22 @@ nav li {
     text-decoration-style: dotted;
 }
 
-
+.main{
+    width:	75%;
+    display:inline-block;
+}
+.sidebar{
+    display:inline-block;
+    margin: 0 auto;
+    overflow: auto;	
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    border: 2px solid black;
+}
+aside ul{
+    padding:8%;
+}
+aside li{
+    padding: 5px 5px 5px 5px;
+}
