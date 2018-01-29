@@ -16,6 +16,9 @@ body{
 #menuTop{
     float: right;
 }
+#menuTop li a{
+    cursor: pointer;
+}
 nav li {
     float: left;
     overflow: auto;
@@ -163,7 +166,7 @@ footer a, aside a {
     
 }
 
-footer a:hover, aside a:hover {
+footer a:hover {
     background: white;
     color: rgb(61, 102, 126);
     border: 1px solid white;
