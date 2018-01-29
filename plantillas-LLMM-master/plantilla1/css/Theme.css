@@ -1,0 +1,376 @@
+
+/*Menu dropdown*/
+
+.dropboton {
+    background-color: rgb(76, 175, 153);
+    color: white;
+    padding: 1.5em;
+    font-size: 1em;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-contenido {
+    display: none;
+    position: absolute;
+    background-color: rgb(43, 105, 92);
+    min-width: 160px;
+    box-shadow: 0 0.5em 11em 0 rgba(7, 7, 7, 0.2);
+    z-index: 1;
+}
+
+.dropdown-contenido a {
+    color: black;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-contenido a:hover {background-color: white}
+
+.dropdown:hover .dropdown-contenido {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(112, 252, 221);
+}
+
+/*Menu horizontal*/
+
+.MenuHorizontal ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(76, 175, 153);
+}
+
+.MenuHorizontal li {
+    float: left;
+}
+
+.MenuHorizontal li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.MenuHorizontal li a:hover{
+    background-color: aquamarine;
+}
+/*
+#MenuHorizontal li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}*/
+
+
+/*Menu Horizontal Dropdown nested*/
+
+
+#main_nav ul {
+    background: rgb(164, 252, 255);
+    float: left;
+    
+   
+}
+
+#main_nav  ul{
+    border-radius:0.5em;
+    padding-left: 0;
+}
+
+/*#main_nav > ul{
+    border-radius:0.5em;
+}*/
+
+#main_nav li {
+    
+    border-radius:0.5em;
+    float: left;
+    position: relative;
+    width: 10em;
+    list-style: none;
+   border-style: solid;
+   border-color: black;
+   border-width: 0.1em;
+}
+
+
+#main_nav a {
+    display: block;
+    text-decoration: none;
+    padding: 0.6em;
+    color: #000;
+}
+
+#main_nav ul ul {
+    
+    position: absolute;
+    left: 0;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#main_nav ul ul ul {
+   
+    
+    left: 100%;
+    top: 0;
+}
+
+#main_nav li:hover, #main_nav li:hover li {
+    background: rgb(255, 6, 6)
+}
+
+#main_nav li li:hover, #main_nav li li:hover li {
+    background: rgb(255, 115, 0);
+}
+
+#main_nav li li li:hover {
+    background: rgb(243, 0, 211);
+}
+
+#main_nav li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Contenedor para alinear con barras laterales*/
+#contenidoSecciones{
+
+    width: 60%; /* resta de ancho de lo que oucpa/n la/s barra/s Lateral/es*/
+    margin-left: 20%;
+    margin-right: 15%;
+}
+/* Barra lateral examen prueba derecha*/
+.BarraLateral{
+    float:right;
+    position: fixed;
+    left:73%;
+    top:47%;
+    width:25%;
+    margin-left:2%;
+    background-color: rgb(90, 129, 173);
+    border-radius:1em;
+    
+}
+
+#ulLateral{
+    list-style: none;
+}
+.BarraLateral h3{
+    margin-left:2em;
+}
+
+#ulLateral li {
+    padding:0.5em;
+    margin:0.5em;
+    border-style:solid;
+    border-width: 0.01em;
+    border-color:white;
+    border-radius:1em;
+
+}
+
+#ulLateral li a{
+
+    text-decoration-line:none;
+    color: white;
+    
+
+}
+
+#ulLateral li:hover{
+    background-color: white;
+    
+}
+#ulLateral li:hover a{
+
+color:rgb(90, 129, 173);
+}
+
+/*Barra lateral w3 izquierda*/
+
+.sidenav {
+    
+    height: 50%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 30%;
+    left: 0;
+    background-color: #111;
+    
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/*FOOTER*/
+
+#fooContenedor{
+    margin-top:2em;
+    padding-top:1.5em;
+    padding-bottom: 0.5em;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(90, 129, 173);
+    
+    border-style:solid;
+    border-color:black;
+    border-width: 0.1em;
+    border-radius: 0.8em;
+    float:left;
+    
+}
+
+.fooMenu{
+    
+    display:inline-block;
+}
+
+.ulfoo {
+    list-style-type:none; 
+    width: 100%;
+    margin-left: 5%;
+    margin-right:18%;
+    
+}
+.ulfoo li {
+    margin:1em;
+    padding:0.5em;
+    float:left;
+    font-family: Courier New, Courier, monospace;
+    background-color: rgb(90, 129, 173);
+    width: 10em;
+    border-width: 0.1px;
+    border-color:white;
+    border-style: dashed;
+  
+}
+
+
+.ulfoo li a {
+    
+    color: rgb(255, 255, 255);
+    padding: 1em 1em;
+    text-decoration-line:none;    
+    font-size: 1em;
+    
+    
+}
+
+/*FOOTER SPRITE*/
+
+#social-media {
+    margin-top: 10%;
+    float:right;
+    
+}
+#social-media a {
+    border-radius:2px; 
+    border:10px; 
+    display:inline-block;
+    
+    width:30px; 
+    height:30px;}
+ 
+a.facebook{
+    display:inline-block; 
+    background-position:  0px 0px; 
+ background: url(imagenes/social-icons.jpg) no-repeat;
+    }
+
+a.facebook:hover{background-position: 0px -30px;}
+ 
+a.twitter{
+    background: url(imagenes/social-icons.jpg) no-repeat;
+    display:inline-block; 
+    background-position-x: -30px;
+    background-position-y: 0px; 
+    width:30px; 
+    height:30px;
+    
+}
+a.twitter:hover{background-position:-30px -30px;}
+ 
+ 
+a.instagram{
+    display:inline-block; 
+    background: url(imagenes/social-icons.jpg) no-repeat -90px 0px;
+    width:30px; 
+    height:30px;}
+a.instagram:hover{background-position:-90px -30px;}
+ 
+
+a.googleplus{
+    display:inline-block; 
+    background: url(imagenes/social-icons.jpg) no-repeat -180px 0px; 
+    width:30px; 
+    height:30px;}
+a.googleplus:hover{background-position: -180px -30px;}
+
+
+/*General*/
+body {
+    font: 300 15px/1.5 "Helvetica Neue", helvetica, arial, sans-serif;
+    background: rgb(240, 240, 240);
+    margin: 15px;
+}
+
+article {
+    width: 600px;
+    margin: 0 auto;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 2px #666;
+}
+
+section {
+    clear: left;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 100;
+    letter-spacing: 15px;
+    text-align: center;
+}
+
+p {
+    margin: 15px 0;
+}
+
+a {
+    color: rgb(37, 94, 104);
+}
