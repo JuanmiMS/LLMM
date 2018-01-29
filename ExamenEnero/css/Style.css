@@ -22,7 +22,22 @@ nav li {
 } 
 
 
+#menuTop nav ul li a{
+    color: rgb(90, 112, 207);
+    display: block;
+    font-weight: bold;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid white;
+    margin-left: 15px;
 
+}
+
+#menuTop nav ul li a:hover{
+    color: black;
+
+}
 #imgCabecera{
     position: relative;
 }
@@ -58,6 +73,7 @@ nav li {
 }
 main{
     margin-top: 10px;
+    height: 730px;
 }
 .main{
     width:900px;
@@ -117,20 +133,39 @@ aside li img{
     margin-right: 10px;
 }
 
-
-#menuTop nav ul li a{
-    color: rgb(90, 112, 207);
-    display: block;
-    font-weight: bold;
-    padding: 4px;
-    text-decoration: none;
-    font-size: 15px;
-    border: 1px solid white;
+footer {
+    text-align: center;
+    margin-top: 15px;
     margin-left: 15px;
-
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgb(61, 102, 126);
 }
 
-#menuTop nav ul li a:hover{
-    color: black;
+footer ul, aside ul{
+    margin: 0 auto;
+    overflow: auto;
+    list-style-type: none;	
+}
 
+footer li {
+    float: left;
+    overflow: auto;
+    margin: 0 5%;
+} 
+
+footer a, aside a {
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    
+}
+
+footer a:hover, aside a:hover {
+    background: white;
+    color: rgb(61, 102, 126);
+    border: 1px solid white;
+    border-radius: 15px;	
 }
