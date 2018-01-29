@@ -1,8 +1,63 @@
 body{
-
+ width: 1300px;
+ margin: 0 auto;
 }
 
 #titulo{
     float: left;
     text-align: center;
+    line-height: 10%;
+    color: grey;
 }
+#titulo h1{
+    font-size: 40px;
+}
+#menuTop{
+    float: right;
+}
+nav li {
+    float: left;
+    overflow: auto;
+} 
+
+
+#menuTop nav ul li a{
+    color: rgb(90, 112, 207);
+    display: block;
+    font-weight: bold;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid white;
+    margin-left: 15px;
+
+}
+
+#menuTop nav ul li a:hover{
+    color: black;
+
+}
+#imgCabecera{
+    position: relative;
+}
+
+#textImg{
+    text-align: center;
+    position: absolute;
+    background-color: black;
+    opacity: 0.8;
+    padding-left: 35px;
+    padding-right: 35px;
+    line-height: 10%;
+    right: 0;
+    bottom: 35px;
+    color: white;
+}
+#textImg h1{
+    font-size: 25px;
+}
+#textImg p {
+    color: white;
+}
+
+
