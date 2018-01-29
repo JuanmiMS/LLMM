@@ -22,22 +22,7 @@ nav li {
 } 
 
 
-#menuTop nav ul li a{
-    color: rgb(90, 112, 207);
-    display: block;
-    font-weight: bold;
-    padding: 4px;
-    text-decoration: none;
-    font-size: 15px;
-    border: 1px solid white;
-    margin-left: 15px;
 
-}
-
-#menuTop nav ul li a:hover{
-    color: black;
-
-}
 #imgCabecera{
     position: relative;
 }
@@ -71,23 +56,81 @@ nav li {
     text-decoration: underline;
     text-decoration-style: dotted;
 }
-
+main{
+    margin-top: 10px;
+}
 .main{
-    width:	75%;
+    width:900px;
     display:inline-block;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+.main img{
+    width: 99%;
 }
 .sidebar{
+    float: right;
     display:inline-block;
     margin: 0 auto;
     overflow: auto;	
     background-color: white;
-    border-radius: 10px;
+    border-radius: 2px;
     padding-bottom: 15px;
-    border: 2px solid black;
+    border: 2px solid rgb(201, 201, 201);
+}
+.sidebar{
+    width: 25%;
+}
+.sidebar h2{
+    text-align: center;
 }
 aside ul{
-    padding:8%;
+    padding-left: 0px;
 }
-aside li{
-    padding: 5px 5px 5px 5px;
+aside ul a li {
+    display: block;
+}
+aside ul a{
+    padding: 4px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color:rgb(241, 240, 240);
+    margin: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+aside ul a:hover{
+    color: white;
+    background-color:rgb(51, 120, 209);
+}
+
+aside li a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+aside li img{
+    width: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+#menuTop nav ul li a{
+    color: rgb(90, 112, 207);
+    display: block;
+    font-weight: bold;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid white;
+    margin-left: 15px;
+
+}
+
+#menuTop nav ul li a:hover{
+    color: black;
+
 }
