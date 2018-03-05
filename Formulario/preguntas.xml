@@ -1,0 +1,20 @@
+<preguntas>
+    <pregunta>
+        <enunciado>el 1</enunciado>
+        <opcionUno correcto="true">1</opcionUno>
+        <opcionDos>2</opcionDos>
+        <opcionTres>3</opcionTres>
+    </pregunta>
+    <pregunta>
+        <enunciado>el 2</enunciado>
+        <opcionUno>1</opcionUno>
+        <opcionDos correcto="true">2</opcionDos>
+        <opcionTres>3</opcionTres>
+    </pregunta>
+    <pregunta>
+        <enunciado>el 3</enunciado>
+        <opcionUno>1</opcionUno>
+        <opcionDos>2</opcionDos>
+        <opcionTres correcto="true">3</opcionTres>
+    </pregunta>
+</preguntas>
