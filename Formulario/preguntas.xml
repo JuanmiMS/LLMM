@@ -1,9 +1,9 @@
 <preguntas>
     <pregunta>
         <enunciado>el 1</enunciado>
-        <opcionUno correcto="true">1</opcionUno>
-        <opcionDos>2</opcionDos>
-        <opcionTres>3</opcionTres>
+        <opcionUno correcto="true">Respuesta 1</opcionUno>
+        <opcionDos>Respuesta 2</opcionDos>
+        <opcionTres>Respuesta 3</opcionTres>
     </pregunta>
     <pregunta>
         <enunciado>el 2</enunciado>
