@@ -8,7 +8,7 @@
     </pregunta>
     <pregunta>
         <tipo>radio</tipo>
-        <enunciado>¿Qué animal es este?        </enunciado>
+        <enunciado>¿Qué animal es este?</enunciado>
         <respuesta>Jirafa</respuesta>
         <respuesta correcto="true">Elefante</respuesta>
         <respuesta>Matis religiosa</respuesta>

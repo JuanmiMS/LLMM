@@ -1,15 +1,14 @@
 var xmlDoc;
-var numPreguntas=0;
+var numPreguntas = 0;
 
-window.onload = function() {
+window.onload = function () {
     leerXML();
 };
 
 
-
 function leerXML() {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
             //Almacenamos la variable global xmlDoc para trabajar con ella
@@ -26,11 +25,11 @@ function leerXML() {
 
 function imprimirPreguntas() {
 
-    for (var i = 0; i<numPreguntas;i++){
+    for (var i = 0; i < numPreguntas; i++) {
 
         var tipo = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('tipo')[0].innerHTML;
 
-        switch(tipo) {
+        switch (tipo) {
             case "radio":
                 crearRadio(i);
                 break;
@@ -50,12 +49,13 @@ function imprimirPreguntas() {
     }
 }
 
+
 function crearCheck(i) {
 
 }
 
 function crearSelect() {
-    
+
 }
 
 function crearText() {
@@ -74,7 +74,7 @@ function crearRadio(i) {
     element.appendChild(enunciado);
 
     //Radio inputs
-    for (var k = 0; k<numSol;k++) {
+    for (var k = 0; k < numSol; k++) {
 
         var question = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta')[k].innerHTML;
         var radioBut = document.createElement("input");
@@ -87,31 +87,46 @@ function crearRadio(i) {
 
         var label = document.createElement('label');
         label.setAttribute('for', i);
-        label.innerHTML = question+"<br>";
+        label.innerHTML = question + "<br>";
 
         element.appendChild(label);
     }
 }
 
 
-function checkPreguntaUno() {
+function checkPreguntas() {
 
-    var radios = document.getElementsByName('0');
+    var numPreg = xmlDoc.getElementsByTagName('pregunta').length;
 
-    for (var i = 0, length = radios.length; i < length; i++)
-    {
-        if (radios[i].checked) //Selecciona la respuesta seleccionada
+    for (var i = 0; i < numPreg; i++) {
+        var tipo = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName("tipo")[0].innerHTML;
+
+        if (tipo === "radio") {
+            checkRadio(i);
+        }
+        else {
+        }
+    }
+}
+
+function checkRadio(x) {
+
+    var radios = document.getElementsByName(x);
+
+    for (var z = 0, length = radios.length; z < length; z++) {
+
+        if (radios[z].checked) //Selecciona la respuesta seleccionada
         {
             //Comprueba si tiene el atributo correcto=true, y si es así, suma 1 a los puntos
-            var preguntaSel = radios[i].getAttribute("value");
-            console.log("preguntaSel: "+preguntaSel);
-            var resp = xmlDoc.getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto");
-            console.log("resp: "+resp);
-            if(resp){
-                console.log("1- Correctoooo");
+            var preguntaSel = radios[z].getAttribute("value");
+
+            var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto");
+
+            if (resp) {
+                console.log(z+"- Correctoooo");
             }
-            else{
-                console.log("mec")
+            else {
+                console.log(z+"mec")
             }
             break;
         }
