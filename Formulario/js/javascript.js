@@ -32,7 +32,7 @@ function imprimirPreguntas() {
 
         switch(tipo) {
             case "radio":
-                //crearRadio(i);
+                crearRadio(i);
                 break;
             case "checkbox":
                 crearCheck(i);
@@ -45,17 +45,13 @@ function imprimirPreguntas() {
                 console.log("default");
         }
 
-        var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
-        for (var k = 0; k<numSol;k++) {
-            var st = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta')[k].innerHTML;
-            console.log(st);
-        }
+
         console.log("------");
     }
 }
 
-function crearCheck() {
-    
+function crearCheck(i) {
+
 }
 
 function crearSelect() {
@@ -64,6 +60,29 @@ function crearSelect() {
 
 function crearText() {
 
+}
+
+function crearRadio(i) {
+
+    var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
+
+    for (var k = 0; k<numSol;k++) {
+        var question = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta')[k].innerHTML;
+
+        var element = document.getElementById("my_form");
+        var radioBut = document.createElement("input");
+
+        radioBut.setAttribute("type", "radio");
+        radioBut.setAttribute("name", i);
+        radioBut.setAttribute('id', k);
+        element.appendChild(radioBut);
+
+        var label = document.createElement('label');
+        label.setAttribute('for', i);
+        label.innerHTML = question+"<br>";
+
+        element.appendChild(label);
+    }
 }
 
 
