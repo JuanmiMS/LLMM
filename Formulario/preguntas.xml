@@ -1,20 +1,29 @@
 <preguntas>
     <pregunta>
-        <enunciado>el 1</enunciado>
-        <opcionUno correcto="true">Respuesta 1</opcionUno>
-        <opcionDos>Respuesta 2</opcionDos>
-        <opcionTres>Respuesta 3</opcionTres>
+        <tipo>radio</tipo>
+        <enunciado>¿Cuanto es 2+2?</enunciado>
+        <respuesta correcto="true">La respuesta es 4</respuesta>
+        <respuesta>La respuesta es raíz de 9</respuesta>
+        <respuesta>La respuesta está en tu corazón</respuesta>
     </pregunta>
     <pregunta>
-        <enunciado>el 2</enunciado>
-        <opcionUno>1</opcionUno>
-        <opcionDos correcto="true">2</opcionDos>
-        <opcionTres>3</opcionTres>
+        <tipo>radio</tipo>
+        <enunciado>¿Qué animal es este?        </enunciado>
+        <respuesta>Jirafa</respuesta>
+        <respuesta correcto="true">Elefante</respuesta>
+        <respuesta>Matis religiosa</respuesta>
+        <respuesta>Murciélago</respuesta>
     </pregunta>
     <pregunta>
-        <enunciado>el 3</enunciado>
-        <opcionUno>1</opcionUno>
-        <opcionDos>2</opcionDos>
-        <opcionTres correcto="true">3</opcionTres>
+        <tipo>checkbox</tipo>
+        <enunciado>Selecciona todas las respuestas correctas</enunciado>
+        <respuesta correcto="true">Correctas</respuesta>
+        <respuesta correcto="true">Correctas</respuesta>
+        <respuesta>NO CORRECTO</respuesta>
     </pregunta>
+    <pregunta>
+        <tipo>selecttext</tipo>
+        <enunciado>Selecciona todas las respuestas correctas</enunciado>
+    </pregunta>
+
 </preguntas>
