@@ -65,15 +65,23 @@ function crearText() {
 function crearRadio(i) {
 
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
+    var element = document.getElementById("my_form");
 
+    //enunciado
+    var enunciado = document.createElement("label");
+    enunciado.setAttribute('for', i);
+    enunciado.innerHTML = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('enunciado')[0].innerHTML + "<br>";
+    element.appendChild(enunciado);
+
+    //Radio inputs
     for (var k = 0; k<numSol;k++) {
-        var question = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta')[k].innerHTML;
 
-        var element = document.getElementById("my_form");
+        var question = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta')[k].innerHTML;
         var radioBut = document.createElement("input");
 
         radioBut.setAttribute("type", "radio");
         radioBut.setAttribute("name", i);
+        radioBut.setAttribute("value", k);
         radioBut.setAttribute('id', k);
         element.appendChild(radioBut);
 
@@ -88,7 +96,7 @@ function crearRadio(i) {
 
 function checkPreguntaUno() {
 
-    var radios = document.getElementsByName('uno');
+    var radios = document.getElementsByName('0');
 
     for (var i = 0, length = radios.length; i < length; i++)
     {
@@ -97,11 +105,13 @@ function checkPreguntaUno() {
             //Comprueba si tiene el atributo correcto=true, y si es así, suma 1 a los puntos
             var preguntaSel = radios[i].getAttribute("value");
             console.log("preguntaSel: "+preguntaSel);
-            var resp = xmlDoc.getElementsByTagName(preguntaSel)[0].getAttribute("correcto");
+            var resp = xmlDoc.getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto");
             console.log("resp: "+resp);
             if(resp){
-                puntosTotales+=1;
                 console.log("1- Correctoooo");
+            }
+            else{
+                console.log("mec")
             }
             break;
         }
