@@ -9,6 +9,8 @@
     <pregunta>
         <tipo>radio</tipo>
         <enunciado>¿Qué animal es este?</enunciado>
+        <img>img/jirafa.jpg</img>
+        <img>img/jirafa_ans.jpg</img>
         <respuesta>Jirafa</respuesta>
         <respuesta correcto="true">Elefante</respuesta>
         <respuesta>Matis religiosa</respuesta>

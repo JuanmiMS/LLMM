@@ -1,5 +1,6 @@
 var xmlDoc;
 var numPreguntas = 0;
+var totalPoints = 0
 
 
 
@@ -53,7 +54,6 @@ function imprimirPreguntas() {
     }
 }
 
-
 function crearRadio(i) {
 
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
@@ -68,8 +68,19 @@ function crearRadio(i) {
     var enunciado = document.createElement("label");
     enunciado.setAttribute('for', i);
     enunciado.innerHTML = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('enunciado')[0].innerHTML + "<br>";
-    div.appendChild(enunciado);
 
+
+    //Comprueba si tiene una imagen que mostrar
+    var imagen = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('img')[0];
+    if (imagen){
+        var img = document.createElement("img");
+        img.setAttribute("src", xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('img')[0].innerHTML);
+        img.setAttribute("width","100px");
+        img.setAttribute("float","right");
+
+        div.appendChild(img)
+    }
+    div.appendChild(enunciado);
     //Radio inputs
     for (var k = 0; k < numSol; k++) {
 
@@ -231,6 +242,7 @@ function crearRange(i) {
 function checkPreguntas() {
 
     var numPreg = xmlDoc.getElementsByTagName('pregunta').length;
+    totalPoints = 0;
 
     for (var i = 0; i < numPreg; i++) {
         var tipo = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName("tipo")[0].innerHTML;
@@ -247,7 +259,11 @@ function checkPreguntas() {
         else if (tipo === "text") {
             checkText(i);
         }
+
+
+
     }
+    alert("Puntos totales: "+totalPoints)
 }
 
 function checkRadio(x) {
@@ -263,12 +279,30 @@ function checkRadio(x) {
             var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto");
 
             if (resp) {
-                console.log(z + "- Correctoooo");
+                totalPoints++;
+                document.getElementById("div"+x).style.backgroundColor="green";
+            }
+            else {
+                document.getElementById("div"+x).style.backgroundColor="red";
+
             }
 
             break;
         }
     }
+
+    var imagen = xmlDoc.getElementsByTagName('pregunta')[x].getElementsByTagName('img')[0];
+    if (imagen){
+        var img = document.createElement("img");
+        img.setAttribute("src", xmlDoc.getElementsByTagName('pregunta')[x].getElementsByTagName('img')[1].innerHTML);
+        img.setAttribute("width","100px");
+        img.setAttribute("float","right");
+
+        var div = document.getElementById("div1");
+        div.appendChild(img)
+    }
+
+
 }
 function checkCheckbox(x) {
 
@@ -307,7 +341,13 @@ function checkCheckbox(x) {
 
     //Comprobacion final
     if (contSelecCorrectas === contCorrectas && contCorrectas === contSeleccionadas) {
-        console.log(x + "- Correctoooo")
+        totalPoints++;
+
+        document.getElementById("div"+x).style.backgroundColor="green";
+    }
+    else {
+        document.getElementById("div"+x).style.backgroundColor="red";
+
     }
 
 }
@@ -319,7 +359,12 @@ function checkText(x) {
     var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[0].innerHTML;
 
     if (resp === userAns) {
-        console.log(x + "- Correctoooo");
+        totalPoints++;
+        document.getElementById("div"+x).style.backgroundColor="green";
+    }
+    else {
+        document.getElementById("div"+x).style.backgroundColor="red";
+
     }
 }
 function checkSelect(x) {
@@ -337,7 +382,12 @@ function checkSelect(x) {
             var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto");
 
             if (resp) {
-                console.log(z + "- Correctoooo");
+                totalPoints++;
+                document.getElementById("div"+x).style.backgroundColor="green";
+            }
+            else {
+                document.getElementById("div"+x).style.backgroundColor="red";
+
             }
             break;
         }
