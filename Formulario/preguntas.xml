@@ -28,7 +28,7 @@
     <pregunta>
         <tipo>select</tipo>
         <enunciado>Pensar una pregunta para esto</enunciado>
-        <respuesta>Respuesta 1</respuesta>
+        <respuesta correcto="true">Respuesta 1</respuesta>
         <respuesta>Respuesta 2</respuesta>
         <respuesta>Respuesta 3</respuesta>
         <respuesta>Respuesta 4</respuesta>

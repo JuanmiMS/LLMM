@@ -39,8 +39,8 @@ function imprimirPreguntas() {
             case "text":
                 crearText(i);
                 break;
-            case "text":
-                crearText(i);
+            case "select":
+                crearSelect(i);
                 break;
             default:
                 console.log("default");
@@ -134,6 +134,39 @@ function crearText(i) {
         // label.setAttribute('for', i);
         // label.innerHTML = question + "<br>";
         //element.appendChild(label);
+    }
+}
+function crearSelect(i) {
+    var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
+    var element = document.getElementById("my_form");
+
+    //enunciado
+    var enunciado = document.createElement("label");
+    enunciado.setAttribute('for', i);
+    enunciado.innerHTML = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('enunciado')[0].innerHTML + "<br>";
+    element.appendChild(enunciado);
+
+    var select = document.createElement("select");
+    select.setAttribute("name", i);
+    element.appendChild(select);
+
+    //Option inputs
+    for (var k = 0; k < numSol; k++) {
+
+        var question = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta')[k].innerHTML;
+        var option = document.createElement("option");
+
+        option.setAttribute("name", i);
+        option.setAttribute("value", k);
+        option.setAttribute('id', k+"check");
+        option.innerHTML = question;
+        select.appendChild(option);
+
+        var label = document.createElement('label');
+        label.setAttribute('for', i);
+        label.innerHTML = "<br>";
+
+        element.appendChild(label);
     }
 }
 
