@@ -55,7 +55,7 @@ function crearRadio(i) {
     var element = document.getElementById("my_form");
 
     var div = document.createElement("div");
-    div.setAttribute("id", "div"+i);
+    div.setAttribute("id", "div" + i);
     element.appendChild(div);
 
     //enunciado
@@ -73,7 +73,7 @@ function crearRadio(i) {
         radioBut.setAttribute("type", "radio");
         radioBut.setAttribute("name", i);
         radioBut.setAttribute("value", k);
-        radioBut.setAttribute('id', k+"radio");
+        radioBut.setAttribute('id', k + "radio");
         div.appendChild(radioBut);
 
         var label = document.createElement('label');
@@ -83,12 +83,13 @@ function crearRadio(i) {
         div.appendChild(label);
     }
 }
+
 function crearCheck(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
     var div = document.createElement("div");
-    div.setAttribute("id", "div"+i);
+    div.setAttribute("id", "div" + i);
     element.appendChild(div);
 
     //enunciado
@@ -106,7 +107,7 @@ function crearCheck(i) {
         check.setAttribute("type", "checkbox");
         check.setAttribute("name", i);
         check.setAttribute("value", k);
-        check.setAttribute('id', k+"check");
+        check.setAttribute('id', k + "check");
         div.appendChild(check);
 
         var label = document.createElement('label');
@@ -116,12 +117,13 @@ function crearCheck(i) {
         div.appendChild(label);
     }
 }
+
 function crearText(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
     var div = document.createElement("div");
-    div.setAttribute("id", "div"+i);
+    div.setAttribute("id", "div" + i);
     element.appendChild(div);
 
     //enunciado
@@ -138,7 +140,7 @@ function crearText(i) {
 
         text.setAttribute("type", "text");
         text.setAttribute("name", i);
-        text.setAttribute('id', i+"text");
+        text.setAttribute('id', i + "text");
         div.appendChild(text);
 
         //TODO esta parte sirve
@@ -148,12 +150,13 @@ function crearText(i) {
         div.appendChild(label);
     }
 }
+
 function crearSelect(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
     var div = document.createElement("div");
-    div.setAttribute("id", "div"+i);
+    div.setAttribute("id", "div" + i);
     element.appendChild(div);
 
     //enunciado
@@ -163,6 +166,7 @@ function crearSelect(i) {
     div.appendChild(enunciado);
 
     var select = document.createElement("select");
+    select.setAttribute("id",i+"select");
     select.setAttribute("name", i);
     div.appendChild(select);
 
@@ -174,16 +178,16 @@ function crearSelect(i) {
 
         option.setAttribute("name", i);
         option.setAttribute("value", k);
-        option.setAttribute('id', k+"check");
+        option.setAttribute('id', k + "check");
         option.innerHTML = question;
         select.appendChild(option);
 
         var label = document.createElement('label');
         label.setAttribute('for', i);
-        label.innerHTML = "<br>";
-
-        div.appendChild(label);
     }
+    label.innerHTML = "<br>";
+
+    div.appendChild(label);
 }
 
 function checkPreguntas() {
@@ -196,15 +200,14 @@ function checkPreguntas() {
         if (tipo === "radio") {
             checkRadio(i);
         }
-        else if(tipo === "checkbox"){
+        else if (tipo === "check") {
             checkCheckbox(i);
         }
-
-        else if (tipo = "text"){
-            checkText(i);
-        }
-        else if (tipo = "selec"){
+        else if (tipo === "select") {
             checkSelect(i);
+        }
+        else if (tipo === "text") {
+            checkText(i);
         }
     }
 }
@@ -222,11 +225,9 @@ function checkRadio(x) {
             var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto");
 
             if (resp) {
-                console.log(z+"- Correctoooo");
+                console.log(z + "- Correctoooo");
             }
-            else {
-                console.log(z+"mec")
-            }
+
             break;
         }
     }
@@ -241,8 +242,8 @@ function checkCheckbox(x) {
     //Cuenta cuantas respuestas tienen que ser seleccionadas
     for (var z = 0, length = radios.length; z < length; z++) {
         var preguntaSel = radios[z].getAttribute("value");
-        if (xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto")){
-            contCorrectas+=1;
+        if (xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto")) {
+            contCorrectas += 1;
         }
 
     }
@@ -267,45 +268,38 @@ function checkCheckbox(x) {
     }
 
     //Comprobacion final
-    if (contSelecCorrectas === contCorrectas && contCorrectas === contSeleccionadas){
-        console.log(x+"correcto")
-    }
-    else{
-        console.log(x+"MEC")
+    if (contSelecCorrectas === contCorrectas && contCorrectas === contSeleccionadas) {
+        console.log(x + "- Correctoooo")
     }
 
 }
 function checkText(x) {
-
-    console.log(x+"text");
-    var userAns = document.getElementById(x+"text").value;
+    try {
+        var userAns = document.getElementById(x + "text").value;
+    } catch (e) {
+    }
     var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[0].innerHTML;
 
-
     if (resp === userAns) {
-        console.log(x+"- Correctoooo");
-    }
-    else {
-        console.log(x+"mec38")
+        console.log(x + "- Correctoooo");
     }
 }
 function checkSelect(x) {
 
-    var radios = document.getElementsByName(x);
-    for (var z = 0, length = radios.length; z < length; z++) {
+    var option = document.getElementsByName(x);
+   // var respuesta = document.getElementById(x+"select").value;
 
-        if (radios[z].checked) //Selecciona la respuesta seleccionada
+
+    for (var z = 0, length = option.length; z < length; z++) {
+        if (option[z].selected) //Selecciona la respuesta seleccionada
         {
             //Comprueba si tiene el atributo correcto=true, y si es así, suma 1 a los puntos
-            var preguntaSel = radios[z].getAttribute("value");
+            var preguntaSel = document.getElementById(x+"select").value;
 
             var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto");
 
             if (resp) {
-                console.log(z+"- Correctoooo2");
-            }
-            else {
-                console.log(z+"mec222")
+                console.log(z + "- Correctoooo");
             }
             break;
         }
