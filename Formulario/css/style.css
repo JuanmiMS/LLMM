@@ -21,10 +21,34 @@ html {
     min-width: 400px;
 }
 
+#boton{
+    margin: 0 auto;
+}
+
+#puntuacion{
+    color: white;
+    font-size: 30px;
+    background-color: #719cc4;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 50%;
+    padding: 10px;
+    -webkit-box-shadow: 6px 2px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 2px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 6px 2px 5px -1px rgba(0,0,0,0.75);
+}
+
+img {
+    width: 150px;
+    float: right;
+}
 .pregunta {
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     width: 50%;
     background-color: white;
     padding: 10px;
+    -webkit-box-shadow: 6px 2px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 2px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 6px 2px 5px -1px rgba(0,0,0,0.75);
 }

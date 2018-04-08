@@ -1,8 +1,6 @@
 var xmlDoc;
 var numPreguntas = 0;
-var totalPoints = 0
-
-
+var totalPoints = 0;
 
 window.onload = function () {
     leerXML();
@@ -12,12 +10,11 @@ window.onload = function () {
 function leerXML() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
 
             //Almacenamos la variable global xmlDoc para trabajar con ella
             xmlDoc = this.responseXML;
             numPreguntas = xmlDoc.getElementsByTagName('pregunta').length;
-
             imprimirPreguntas();
         }
     };
@@ -75,8 +72,7 @@ function crearRadio(i) {
     if (imagen){
         var img = document.createElement("img");
         img.setAttribute("src", xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('img')[0].innerHTML);
-        img.setAttribute("width","100px");
-        img.setAttribute("float","right");
+        img.setAttribute("id","jirafa");
 
         div.appendChild(img)
     }
@@ -99,6 +95,8 @@ function crearRadio(i) {
 
         div.appendChild(label);
     }
+
+
 }
 function crearCheck(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
@@ -228,7 +226,7 @@ function crearRange(i) {
     range.setAttribute("max", 99);
     range.setAttribute("name", i);
     range.setAttribute("value", 50);
-    range.setAttribute('id', "range");
+    range.setAttribute('id', i+"range");
     div.appendChild(range);
 
     var label = document.createElement('label');
@@ -237,7 +235,17 @@ function crearRange(i) {
 
     div.appendChild(label);
 }
+function crearPuntuacion() {
+    var element = document.getElementById("my_form");
 
+    var div = document.createElement("div");
+    div.setAttribute("id", "puntuacion");
+    element.appendChild(div);
+
+    var label = document.createElement('label');
+    label.innerHTML = "Puntuacion total:" +totalPoints;
+    div.appendChild(label);
+}
 
 function checkPreguntas() {
 
@@ -259,16 +267,18 @@ function checkPreguntas() {
         else if (tipo === "text") {
             checkText(i);
         }
-
-
-
+        else if(tipo === "range"){
+            checkRange(i);
+        }
+        document.getElementById("boton").disabled = true;
     }
-    alert("Puntos totales: "+totalPoints)
+    crearPuntuacion();
 }
 
 function checkRadio(x) {
 
     var radios = document.getElementsByName(x);
+    var isNull = true;
     for (var z = 0, length = radios.length; z < length; z++) {
 
         if (radios[z].checked) //Selecciona la respuesta seleccionada
@@ -289,17 +299,17 @@ function checkRadio(x) {
 
             break;
         }
+
+        if(isNull){
+            document.getElementById("div"+x).style.backgroundColor="red";
+        }
     }
 
     var imagen = xmlDoc.getElementsByTagName('pregunta')[x].getElementsByTagName('img')[0];
     if (imagen){
-        var img = document.createElement("img");
-        img.setAttribute("src", xmlDoc.getElementsByTagName('pregunta')[x].getElementsByTagName('img')[1].innerHTML);
-        img.setAttribute("width","100px");
-        img.setAttribute("float","right");
+        var image = document.getElementById("jirafa");
+        image.src = "img/jirafa_ans.jpg"
 
-        var div = document.getElementById("div1");
-        div.appendChild(img)
     }
 
 
@@ -391,5 +401,16 @@ function checkSelect(x) {
             }
             break;
         }
+    }
+}
+function checkRange(x) {
+    var points = document.getElementById(x+"range").value;
+    var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[0].innerHTML;
+    if (points === resp ){
+        totalPoints++;
+        document.getElementById("div"+x).style.backgroundColor="green";
+    }
+    else {
+        document.getElementById("div"+x).style.backgroundColor="red";
     }
 }

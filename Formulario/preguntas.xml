@@ -39,6 +39,7 @@
     <pregunta>
         <tipo>range</tipo>
         <enunciado>Última prueba. Es una prueba de habilidad, ajusta la barra de abajo a la posición 5.</enunciado>
+        <respuesta>5</respuesta>
     </pregunta>
 
 </preguntas>
