@@ -15,15 +15,24 @@
         <respuesta>Murciélago</respuesta>
     </pregunta>
     <pregunta>
-        <tipo>checkbox</tipo>
+        <tipo>check</tipo>
         <enunciado>Selecciona todas las respuestas correctas</enunciado>
-        <respuesta correcto="true">Correctas</respuesta>
-        <respuesta correcto="true">Correctas</respuesta>
-        <respuesta>NO CORRECTO</respuesta>
+        <respuesta correcto="true">Esta y la de abajo son incorrecta</respuesta>
+        <respuesta correcto="true">Esta es incorrecta</respuesta>
+        <respuesta>Las de arriba con incorrectas</respuesta>
     </pregunta>
     <pregunta>
         <tipo>selecttext</tipo>
         <enunciado>Selecciona todas las respuestas correctas</enunciado>
+    </pregunta>
+    <pregunta>
+        <tipo>select</tipo>
+        <enunciado>Pensar una pregunta para esto</enunciado>
+        <respuesta>Respuesta 1</respuesta>
+        <respuesta>Respuesta 2</respuesta>
+        <respuesta>Respuesta 3</respuesta>
+        <respuesta>Respuesta 4</respuesta>
+
     </pregunta>
 
 </preguntas>
