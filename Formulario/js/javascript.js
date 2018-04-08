@@ -236,7 +236,7 @@ function crearRange(i) {
     div.appendChild(label);
 }
 function crearPuntuacion() {
-    var element = document.getElementById("my_form");
+    var element = document.getElementById("cabecera");
 
     var div = document.createElement("div");
     div.setAttribute("id", "puntuacion");
@@ -270,7 +270,7 @@ function checkPreguntas() {
         else if(tipo === "range"){
             checkRange(i);
         }
-        document.getElementById("boton").disabled = true;
+        //document.getElementById("boton").disabled = true;
     }
     crearPuntuacion();
 }
