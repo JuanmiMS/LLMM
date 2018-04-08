@@ -1,6 +1,8 @@
 var xmlDoc;
 var numPreguntas = 0;
 
+
+
 window.onload = function () {
     leerXML();
 };
@@ -42,6 +44,9 @@ function imprimirPreguntas() {
             case "select":
                 crearSelect(i);
                 break;
+            case "range":
+                crearRange(i);
+                break;
             default:
                 console.log("default");
         }
@@ -56,6 +61,7 @@ function crearRadio(i) {
 
     var div = document.createElement("div");
     div.setAttribute("id", "div" + i);
+    div.setAttribute("class", "pregunta");
     element.appendChild(div);
 
     //enunciado
@@ -83,13 +89,13 @@ function crearRadio(i) {
         div.appendChild(label);
     }
 }
-
 function crearCheck(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
     var div = document.createElement("div");
     div.setAttribute("id", "div" + i);
+    div.setAttribute("class", "pregunta");
     element.appendChild(div);
 
     //enunciado
@@ -117,13 +123,13 @@ function crearCheck(i) {
         div.appendChild(label);
     }
 }
-
 function crearText(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
     var div = document.createElement("div");
     div.setAttribute("id", "div" + i);
+    div.setAttribute("class", "pregunta");
     element.appendChild(div);
 
     //enunciado
@@ -150,13 +156,13 @@ function crearText(i) {
         div.appendChild(label);
     }
 }
-
 function crearSelect(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
     var div = document.createElement("div");
     div.setAttribute("id", "div" + i);
+    div.setAttribute("class", "pregunta");
     element.appendChild(div);
 
     //enunciado
@@ -166,7 +172,7 @@ function crearSelect(i) {
     div.appendChild(enunciado);
 
     var select = document.createElement("select");
-    select.setAttribute("id",i+"select");
+    select.setAttribute("id", i + "select");
     select.setAttribute("name", i);
     div.appendChild(select);
 
@@ -189,6 +195,38 @@ function crearSelect(i) {
 
     div.appendChild(label);
 }
+function crearRange(i) {
+
+    var element = document.getElementById("my_form");
+
+    var div = document.createElement("div");
+    div.setAttribute("id", "div" + i);
+    div.setAttribute("class", "pregunta");
+    element.appendChild(div);
+
+    //enunciado
+    var enunciado = document.createElement("label");
+    enunciado.setAttribute('for', i);
+    enunciado.innerHTML = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('enunciado')[0].innerHTML + "<br>";
+    div.appendChild(enunciado);
+
+    var range = document.createElement("input");
+
+    range.setAttribute("type", "range");
+    range.setAttribute("min", 0);
+    range.setAttribute("max", 99);
+    range.setAttribute("name", i);
+    range.setAttribute("value", 50);
+    range.setAttribute('id', "range");
+    div.appendChild(range);
+
+    var label = document.createElement('label');
+    label.setAttribute('for', i);
+    label.innerHTML = "<br>";
+
+    div.appendChild(label);
+}
+
 
 function checkPreguntas() {
 
@@ -287,14 +325,14 @@ function checkText(x) {
 function checkSelect(x) {
 
     var option = document.getElementsByName(x);
-   // var respuesta = document.getElementById(x+"select").value;
+    // var respuesta = document.getElementById(x+"select").value;
 
 
     for (var z = 0, length = option.length; z < length; z++) {
         if (option[z].selected) //Selecciona la respuesta seleccionada
         {
             //Comprueba si tiene el atributo correcto=true, y si es así, suma 1 a los puntos
-            var preguntaSel = document.getElementById(x+"select").value;
+            var preguntaSel = document.getElementById(x + "select").value;
 
             var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto");
 

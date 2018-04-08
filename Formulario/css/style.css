@@ -20,3 +20,11 @@ html {
     background: #bababa;
     min-width: 400px;
 }
+
+.pregunta {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 50%;
+    background-color: white;
+    padding: 10px;
+}

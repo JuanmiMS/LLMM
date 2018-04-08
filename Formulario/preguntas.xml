@@ -34,5 +34,9 @@
         <enunciado>En qué año meme</enunciado>
         <respuesta>1</respuesta>
     </pregunta>
+    <pregunta>
+        <tipo>range</tipo>
+        <enunciado>Última prueba. Es una prueba de habilidad, ajusta la barra de abajo a la posición 5.</enunciado>
+    </pregunta>
 
 </preguntas>
