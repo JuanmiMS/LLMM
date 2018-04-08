@@ -22,8 +22,9 @@
         <respuesta>Las de arriba con incorrectas</respuesta>
     </pregunta>
     <pregunta>
-        <tipo>selecttext</tipo>
-        <enunciado>Selecciona todas las respuestas correctas</enunciado>
+        <tipo>text</tipo>
+        <enunciado>En qué año meme</enunciado>
+        <respuesta>1</respuesta>
     </pregunta>
     <pregunta>
         <tipo>select</tipo>

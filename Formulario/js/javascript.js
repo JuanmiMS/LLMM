@@ -54,11 +54,15 @@ function crearRadio(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
+    var div = document.createElement("div");
+    div.setAttribute("id", "div"+i);
+    element.appendChild(div);
+
     //enunciado
     var enunciado = document.createElement("label");
     enunciado.setAttribute('for', i);
     enunciado.innerHTML = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('enunciado')[0].innerHTML + "<br>";
-    element.appendChild(enunciado);
+    div.appendChild(enunciado);
 
     //Radio inputs
     for (var k = 0; k < numSol; k++) {
@@ -70,24 +74,28 @@ function crearRadio(i) {
         radioBut.setAttribute("name", i);
         radioBut.setAttribute("value", k);
         radioBut.setAttribute('id', k+"radio");
-        element.appendChild(radioBut);
+        div.appendChild(radioBut);
 
         var label = document.createElement('label');
         label.setAttribute('for', i);
         label.innerHTML = question + "<br>";
 
-        element.appendChild(label);
+        div.appendChild(label);
     }
 }
 function crearCheck(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
+    var div = document.createElement("div");
+    div.setAttribute("id", "div"+i);
+    element.appendChild(div);
+
     //enunciado
     var enunciado = document.createElement("label");
     enunciado.setAttribute('for', i);
     enunciado.innerHTML = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('enunciado')[0].innerHTML + "<br>";
-    element.appendChild(enunciado);
+    div.appendChild(enunciado);
 
     //Radio inputs
     for (var k = 0; k < numSol; k++) {
@@ -99,24 +107,28 @@ function crearCheck(i) {
         check.setAttribute("name", i);
         check.setAttribute("value", k);
         check.setAttribute('id', k+"check");
-        element.appendChild(check);
+        div.appendChild(check);
 
         var label = document.createElement('label');
         label.setAttribute('for', i);
         label.innerHTML = question + "<br>";
 
-        element.appendChild(label);
+        div.appendChild(label);
     }
 }
 function crearText(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
+    var div = document.createElement("div");
+    div.setAttribute("id", "div"+i);
+    element.appendChild(div);
+
     //enunciado
     var enunciado = document.createElement("label");
     enunciado.setAttribute('for', i);
     enunciado.innerHTML = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('enunciado')[0].innerHTML + "<br>";
-    element.appendChild(enunciado);
+    div.appendChild(enunciado);
 
     //Radio inputs
     for (var k = 0; k < numSol; k++) {
@@ -127,28 +139,32 @@ function crearText(i) {
         text.setAttribute("type", "text");
         text.setAttribute("name", i);
         text.setAttribute('id', i+"text");
-        element.appendChild(text);
+        div.appendChild(text);
 
-        //TODO esta parte servirá a la hora de imprimir la respuesta. No borrar! :D
-        // var label = document.createElement('label');
-        // label.setAttribute('for', i);
-        // label.innerHTML = question + "<br>";
-        //element.appendChild(label);
+        //TODO esta parte sirve
+        var label = document.createElement('label');
+        label.setAttribute('for', i);
+        label.innerHTML = "<br>";
+        div.appendChild(label);
     }
 }
 function crearSelect(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
 
+    var div = document.createElement("div");
+    div.setAttribute("id", "div"+i);
+    element.appendChild(div);
+
     //enunciado
     var enunciado = document.createElement("label");
     enunciado.setAttribute('for', i);
     enunciado.innerHTML = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('enunciado')[0].innerHTML + "<br>";
-    element.appendChild(enunciado);
+    div.appendChild(enunciado);
 
     var select = document.createElement("select");
     select.setAttribute("name", i);
-    element.appendChild(select);
+    div.appendChild(select);
 
     //Option inputs
     for (var k = 0; k < numSol; k++) {
@@ -166,7 +182,7 @@ function crearSelect(i) {
         label.setAttribute('for', i);
         label.innerHTML = "<br>";
 
-        element.appendChild(label);
+        div.appendChild(label);
     }
 }
 
@@ -186,6 +202,9 @@ function checkPreguntas() {
 
         else if (tipo = "text"){
             checkText(i);
+        }
+        else if (tipo = "selec"){
+            checkSelect(i);
         }
     }
 }
@@ -258,6 +277,7 @@ function checkCheckbox(x) {
 }
 function checkText(x) {
 
+    console.log(x+"text");
     var userAns = document.getElementById(x+"text").value;
     var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[0].innerHTML;
 
@@ -266,6 +286,28 @@ function checkText(x) {
         console.log(x+"- Correctoooo");
     }
     else {
-        console.log(x+"mec")
+        console.log(x+"mec38")
+    }
+}
+function checkSelect(x) {
+
+    var radios = document.getElementsByName(x);
+    for (var z = 0, length = radios.length; z < length; z++) {
+
+        if (radios[z].checked) //Selecciona la respuesta seleccionada
+        {
+            //Comprueba si tiene el atributo correcto=true, y si es así, suma 1 a los puntos
+            var preguntaSel = radios[z].getAttribute("value");
+
+            var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[preguntaSel].getAttribute("correcto");
+
+            if (resp) {
+                console.log(z+"- Correctoooo2");
+            }
+            else {
+                console.log(z+"mec222")
+            }
+            break;
+        }
     }
 }
