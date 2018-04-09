@@ -1,6 +1,7 @@
 var xmlDoc;
 var numPreguntas = 0;
 var totalPoints = 0;
+var isAlreadyCorrect = false;
 
 window.onload = function () {
     leerXML();
@@ -249,30 +250,38 @@ function crearPuntuacion() {
 
 function checkPreguntas() {
 
-    var numPreg = xmlDoc.getElementsByTagName('pregunta').length;
-    totalPoints = 0;
+    if (!isAlreadyCorrect) {
+        var numPreg = xmlDoc.getElementsByTagName('pregunta').length;
+        totalPoints = 0;
 
-    for (var i = 0; i < numPreg; i++) {
-        var tipo = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName("tipo")[0].innerHTML;
+        for (var i = 0; i < numPreg; i++) {
+            var tipo = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName("tipo")[0].innerHTML;
 
-        if (tipo === "radio") {
-            checkRadio(i);
+            if (tipo === "radio") {
+                checkRadio(i);
+            }
+            else if (tipo === "check") {
+                checkCheckbox(i);
+            }
+            else if (tipo === "select") {
+                checkSelect(i);
+            }
+            else if (tipo === "text") {
+                checkText(i);
+            }
+            else if (tipo === "range") {
+                checkRange(i);
+            }
+            //document.getElementById("boton").disabled = true;
         }
-        else if (tipo === "check") {
-            checkCheckbox(i);
-        }
-        else if (tipo === "select") {
-            checkSelect(i);
-        }
-        else if (tipo === "text") {
-            checkText(i);
-        }
-        else if(tipo === "range"){
-            checkRange(i);
-        }
-        //document.getElementById("boton").disabled = true;
+        crearPuntuacion();
+        document.getElementById("boton").setAttribute("style", "background-color: grey !important");
+        document.getElementById("boton").innerText= totalPoints +"/"+numPreg +" preguntas correctas";
+        isAlreadyCorrect = true;
     }
-    crearPuntuacion();
+    else{
+        alert("Examen ya corregido. Recarga la página para volver a intentarlo.")
+    }
 }
 
 function checkRadio(x) {
