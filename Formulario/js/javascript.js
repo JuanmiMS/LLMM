@@ -70,10 +70,10 @@ function crearRadio(i) {
 
     //Comprueba si tiene una imagen que mostrar
     var imagen = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('img')[0];
-    if (imagen){
+    if (imagen) {
         var img = document.createElement("img");
         img.setAttribute("src", xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('img')[0].innerHTML);
-        img.setAttribute("id","jirafa");
+        img.setAttribute("id", "jirafa");
 
         div.appendChild(img)
     }
@@ -87,11 +87,11 @@ function crearRadio(i) {
         radioBut.setAttribute("type", "radio");
         radioBut.setAttribute("name", i);
         radioBut.setAttribute("value", k);
-        radioBut.setAttribute('id', k + "radio");
+        radioBut.setAttribute('id', "div" + i + k + "radio");
         div.appendChild(radioBut);
 
         var label = document.createElement('label');
-        label.setAttribute('for', i);
+        label.setAttribute('for', "div" + i + k + "radio");
         label.innerHTML = question + "<br>";
 
         div.appendChild(label);
@@ -99,6 +99,7 @@ function crearRadio(i) {
 
 
 }
+
 function crearCheck(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
@@ -123,16 +124,17 @@ function crearCheck(i) {
         check.setAttribute("type", "checkbox");
         check.setAttribute("name", i);
         check.setAttribute("value", k);
-        check.setAttribute('id', k + "check");
+        check.setAttribute('id', "div" + i + k + "check");
         div.appendChild(check);
 
         var label = document.createElement('label');
-        label.setAttribute('for', i);
+        label.setAttribute('for', "div" + i + k + "check");
         label.innerHTML = question + "<br>";
 
         div.appendChild(label);
     }
 }
+
 function crearText(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
@@ -166,6 +168,7 @@ function crearText(i) {
         div.appendChild(label);
     }
 }
+
 function crearSelect(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('respuesta').length;
     var element = document.getElementById("my_form");
@@ -205,6 +208,7 @@ function crearSelect(i) {
 
     div.appendChild(label);
 }
+
 function crearRange(i) {
 
     var element = document.getElementById("my_form");
@@ -224,10 +228,10 @@ function crearRange(i) {
 
     range.setAttribute("type", "range");
     range.setAttribute("min", 0);
-    range.setAttribute("max", 99);
+    range.setAttribute("max", 1000);
     range.setAttribute("name", i);
     range.setAttribute("value", 50);
-    range.setAttribute('id', i+"range");
+    range.setAttribute('id', i + "range");
     div.appendChild(range);
 
     var label = document.createElement('label');
@@ -236,6 +240,7 @@ function crearRange(i) {
 
     div.appendChild(label);
 }
+
 function crearPuntuacion() {
     var element = document.getElementById("cabecera");
 
@@ -244,7 +249,7 @@ function crearPuntuacion() {
     element.appendChild(div);
 
     var label = document.createElement('label');
-    label.innerHTML = "Puntuacion total:" +totalPoints;
+    label.innerHTML = "Puntuacion total:" + totalPoints;
     div.appendChild(label);
 }
 
@@ -276,10 +281,10 @@ function checkPreguntas() {
         }
         crearPuntuacion();
         document.getElementById("boton").setAttribute("style", "background-color: grey !important");
-        document.getElementById("boton").innerText= totalPoints +"/"+numPreg +" preguntas correctas";
+        document.getElementById("boton").innerText = totalPoints + "/" + numPreg + " preguntas correctas";
         isAlreadyCorrect = true;
     }
-    else{
+    else {
         alert("Examen ya corregido. Recarga la página para volver a intentarlo.")
     }
 }
@@ -299,23 +304,23 @@ function checkRadio(x) {
 
             if (resp) {
                 totalPoints++;
-                document.getElementById("div"+x).style.backgroundColor="green";
+                document.getElementById("div" + x).style.backgroundColor = "green";
             }
             else {
-                document.getElementById("div"+x).style.backgroundColor="red";
+                document.getElementById("div" + x).style.backgroundColor = "red";
 
             }
 
             break;
         }
 
-        if(isNull){
-            document.getElementById("div"+x).style.backgroundColor="red";
+        if (isNull) {
+            document.getElementById("div" + x).style.backgroundColor = "red";
         }
     }
 
     var imagen = xmlDoc.getElementsByTagName('pregunta')[x].getElementsByTagName('img')[0];
-    if (imagen){
+    if (imagen) {
         var image = document.getElementById("jirafa");
         image.src = "img/jirafa_ans.jpg"
 
@@ -323,6 +328,7 @@ function checkRadio(x) {
 
 
 }
+
 function checkCheckbox(x) {
 
     var contCorrectas = 0;
@@ -362,14 +368,15 @@ function checkCheckbox(x) {
     if (contSelecCorrectas === contCorrectas && contCorrectas === contSeleccionadas) {
         totalPoints++;
 
-        document.getElementById("div"+x).style.backgroundColor="green";
+        document.getElementById("div" + x).style.backgroundColor = "green";
     }
     else {
-        document.getElementById("div"+x).style.backgroundColor="red";
+        document.getElementById("div" + x).style.backgroundColor = "red";
 
     }
 
 }
+
 function checkText(x) {
     try {
         var userAns = document.getElementById(x + "text").value;
@@ -379,13 +386,14 @@ function checkText(x) {
 
     if (resp === userAns) {
         totalPoints++;
-        document.getElementById("div"+x).style.backgroundColor="green";
+        document.getElementById("div" + x).style.backgroundColor = "green";
     }
     else {
-        document.getElementById("div"+x).style.backgroundColor="red";
+        document.getElementById("div" + x).style.backgroundColor = "red";
 
     }
 }
+
 function checkSelect(x) {
 
     var option = document.getElementsByName(x);
@@ -402,24 +410,25 @@ function checkSelect(x) {
 
             if (resp) {
                 totalPoints++;
-                document.getElementById("div"+x).style.backgroundColor="green";
+                document.getElementById("div" + x).style.backgroundColor = "green";
             }
             else {
-                document.getElementById("div"+x).style.backgroundColor="red";
+                document.getElementById("div" + x).style.backgroundColor = "red";
 
             }
             break;
         }
     }
 }
+
 function checkRange(x) {
-    var points = document.getElementById(x+"range").value;
+    var points = document.getElementById(x + "range").value;
     var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[0].innerHTML;
-    if (points === resp ){
+    if (points === resp) {
         totalPoints++;
-        document.getElementById("div"+x).style.backgroundColor="green";
+        document.getElementById("div" + x).style.backgroundColor = "green";
     }
     else {
-        document.getElementById("div"+x).style.backgroundColor="red";
+        document.getElementById("div" + x).style.backgroundColor = "red";
     }
 }
