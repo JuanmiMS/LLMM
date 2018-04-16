@@ -3,6 +3,19 @@ html {
     background: linear-gradient(0deg, #719cc4 50%, #bababa 50%);
     padding-bottom: 30px;
 }
+@media only screen and (max-width: 1000px) {
+    #cabecera {
+        display: none;
+    }
+}
+#logo{
+    width: 10%;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #cabecera h2{
     text-align: center;
 }
@@ -73,7 +86,7 @@ html {
     box-shadow: 6px 2px 5px -1px rgba(0,0,0,0.75);
 }
 
-img {
+#my_form img {
     width: 150px;
     float: right;
 }
