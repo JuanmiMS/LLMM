@@ -106,7 +106,7 @@
     </pregunta>
     <pregunta>
         <tipo>check</tipo>
-        <enunciado>¿Cual/es de estas barbies no exite/n?</enunciado>
+        <enunciado>¿Cual/es de estas barbies no existe/n?</enunciado>
         <respuesta>Barbie cajera de McDonald's</respuesta>
         <respuesta>Barbie secretaria</respuesta>
         <respuesta correcto="true">Barbie programadora del Dual</respuesta>
