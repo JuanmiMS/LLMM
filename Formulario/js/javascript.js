@@ -2,6 +2,7 @@ var xmlDoc;
 var numPreguntas = 0;
 var totalPoints = 0;
 var isAlreadyCorrect = false;
+var isLogged = false;
 
 window.onload = function () {
     leerXML();
@@ -10,16 +11,20 @@ window.onload = function () {
 
 function checkLogin() {
 
-    try {
-        // var user = document.getElementById("user").;
-        // var pass = document.getElementById("password").value;
-    } catch (e) {
-    }
+        var user = document.getElementById('usuario').value;
+        var pass = document.getElementById('password').value;
 
-    showPreguntas();
+        if(user != "" && pass != ""){
+            isLogged = true;
+            showPreguntas();
+        }
+        else {
+            alert("No puedes dejar los campos vacíos")
+        }
 
 
-    console.log(user+"-");
+
+
 
 }
 
@@ -47,7 +52,7 @@ function crearLogin() {
 
     user.setAttribute("type", "text");
     user.setAttribute("name", "user");
-    user.setAttribute('id', "name");
+    user.setAttribute('id', "usuario");
 
     pass.setAttribute("type", "password");
     pass.setAttribute("name", "password");
@@ -339,7 +344,6 @@ function checkPreguntas() {
             else if (tipo === "range") {
                 checkRange(i);
             }
-            //document.getElementById("boton").disabled = true;
         }
         crearPuntuacion();
         document.getElementById("boton").setAttribute("style", "background-color: grey !important");

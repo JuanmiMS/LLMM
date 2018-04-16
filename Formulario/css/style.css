@@ -3,6 +3,9 @@ html {
     background: linear-gradient(0deg, #719cc4 50%, #bababa 50%);
     padding-bottom: 30px;
 }
+#cabecera h2{
+    text-align: center;
+}
 #preguntaDos{
     display: none;
 }
