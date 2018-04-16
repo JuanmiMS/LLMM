@@ -5,9 +5,72 @@ var isAlreadyCorrect = false;
 
 window.onload = function () {
     leerXML();
+    crearLogin();
 };
 
+function checkLogin() {
 
+    try {
+        // var user = document.getElementById("user").;
+        // var pass = document.getElementById("password").value;
+    } catch (e) {
+    }
+
+    showPreguntas();
+
+
+    console.log(user+"-");
+
+}
+
+function showPreguntas(){
+    document.getElementById("my_form").style.display = "block";
+    document.getElementById("login").style.display = "none";
+}
+
+function crearLogin() {
+    var element = document.getElementById("login");
+
+    var nameLab = document.createElement('label');
+    nameLab.setAttribute('for', "a");
+    nameLab.innerHTML = "Usuario: <br>";
+
+    var passLab = document.createElement('label');
+    passLab.setAttribute('for', "a");
+    passLab.innerHTML = "Contraseña: <br>";
+
+
+    var br = document.createElement('label');
+    var user = document.createElement("input");
+    var pass = document.createElement("input");
+    var butt = document.createElement("button");
+
+    user.setAttribute("type", "text");
+    user.setAttribute("name", "user");
+    user.setAttribute('id', "name");
+
+    pass.setAttribute("type", "password");
+    pass.setAttribute("name", "password");
+    pass.setAttribute('id', "password");
+
+    butt.setAttribute("onclick","checkLogin()");
+
+    element.appendChild(nameLab);
+    nameLab.appendChild(user);
+    nameLab.appendChild(document.createElement("br"));
+    element.appendChild(passLab);
+    passLab.appendChild(pass);
+    passLab.appendChild(document.createElement("br"));
+    passLab.appendChild(butt);
+
+    br.innerHTML = "Iniciar sesión<br>";
+
+    butt.appendChild(br);
+}
+
+
+
+//XML y preguntas
 function leerXML() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -161,7 +224,6 @@ function crearText(i) {
         text.setAttribute('id', i + "text");
         div.appendChild(text);
 
-        //TODO esta parte sirve
         var label = document.createElement('label');
         label.setAttribute('for', i);
         label.innerHTML = "<br>";

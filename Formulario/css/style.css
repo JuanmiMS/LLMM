@@ -30,7 +30,31 @@ html {
 
 
 #my_form{
-    margin-bottom: 5%;
+    display: none;
+    /*margin-bottom: 5%;*/
+    margin: 0 auto;
+}
+
+#login{
+    width: 310px;
+    padding: 50px;
+    display: block;
+    background-color: white;
+    margin: auto;
+}
+
+#login label{
+    /*margin-left: 50px;*/
+}
+
+#login input{
+    margin-left:  auto;
+    margin-top: 10px;
+}
+
+#login button{
+    margin-left: 50px;
+    margin-top: 10px;
 }
 
 #puntuacion{
