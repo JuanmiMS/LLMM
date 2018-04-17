@@ -294,18 +294,27 @@ function crearRange(i) {
     var range = document.createElement("input");
 
     range.setAttribute("type", "range");
+    range.setAttribute("class","range");
     range.setAttribute("min", 0);
     range.setAttribute("max", 1000);
-    range.setAttribute("name", i);
     range.setAttribute("value", 50);
-    range.setAttribute('id', i + "range");
+    range.setAttribute('id', "range"+ i);
+    range.setAttribute("oninput", "sliderChange(this.value, this.id)");
+
     div.appendChild(range);
 
     var label = document.createElement('label');
     label.setAttribute('for', i);
-    label.innerHTML = "<br>";
+    label.setAttribute("id","outputrange"+i);
+    label.innerHTML = "<br> 0";
 
     div.appendChild(label);
+}
+
+function sliderChange(valor, label) {
+    //document.getElementById("output7range").innerHTML = valor;
+    document.getElementById("output"+label).innerHTML = valor;
+
 }
 
 function crearPuntuacion() {
@@ -488,7 +497,8 @@ function checkSelect(x) {
 }
 
 function checkRange(x) {
-    var points = document.getElementById(x + "range").value;
+    var points = document.getElementById("range"+x).value;
+    console.log(points);
     var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[0].innerHTML;
     if (points === resp) {
         totalPoints++;
