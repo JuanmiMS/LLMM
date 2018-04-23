@@ -497,7 +497,7 @@ function checkSelect(x) {
 }
 
 function checkRange(x) {
-    var points = document.getElementById("range"+x).value;
+    var points = document.getElementById("jrange"+x).value;
     console.log(points);
     var resp = xmlDoc.getElementsByTagName("pregunta")[x].getElementsByTagName("respuesta")[0].innerHTML;
     if (points === resp) {
