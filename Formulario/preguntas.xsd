@@ -1,28 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-  <xs:element name="preguntas">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="pregunta"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="pregunta">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="tipo"/>
-        <xs:element ref="enunciado"/>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="img"/>
-        <xs:element maxOccurs="unbounded" ref="respuesta"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="tipo" type="xs:NCName"/>
-  <xs:element name="enunciado" type="xs:string"/>
-  <xs:element name="img" type="xs:string"/>
-  <xs:element name="respuesta">
-    <xs:complexType mixed="true">
-      <xs:attribute name="correcto" type="xs:boolean"/>
-    </xs:complexType>
-  </xs:element>
+<!DOCTYPE xs:schema [
+        <!ELEMENT xs:schema (xs:element|xs:complexType)*>
+        <!ATTLIST xs:schema
+                attributeFormDefault CDATA #REQUIRED
+                elementFormDefault CDATA #REQUIRED
+                xmlns:xs CDATA #REQUIRED>
+        <!ELEMENT xs:element (xs:simpleType)*>
+        <!ATTLIST xs:element
+                maxOccurs CDATA #IMPLIED
+                minOccurs CDATA #IMPLIED
+                name CDATA #REQUIRED
+                type CDATA #IMPLIED>
+        <!ELEMENT xs:complexType (xs:sequence|xs:simpleContent)*>
+        <!ATTLIST xs:complexType
+                name CDATA #REQUIRED>
+        <!ELEMENT xs:sequence (xs:element)*>
+        <!ELEMENT xs:simpleContent (xs:extension)*>
+        <!ELEMENT xs:extension (xs:attribute)*>
+        <!ATTLIST xs:extension
+                base CDATA #REQUIRED>
+        <!ELEMENT xs:attribute (#PCDATA)>
+        <!ATTLIST xs:attribute
+                type CDATA #REQUIRED
+                name CDATA #REQUIRED
+                use CDATA #REQUIRED>
+        <!ELEMENT xs:simpleType (xs:restriction)*>
+        <!ELEMENT xs:restriction (xs:enumeration)*>
+        <!ATTLIST xs:restriction
+                base CDATA #REQUIRED>
+        <!ELEMENT xs:enumeration (#PCDATA)>
+        <!ATTLIST xs:enumeration
+                value CDATA #REQUIRED>
+        ]>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="preguntas" type="preguntasType"/>
+  <xs:complexType name="preguntasType">
+    <xs:sequence>
+      <xs:element type="preguntaType" name="pregunta" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="respuestaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="correcto" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="preguntaType">
+    <xs:sequence>
+      <xs:element name="tipo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="radio"/>
+            <xs:enumeration value="select"/>
+            <xs:enumeration value="check"/>
+            <xs:enumeration value="text"/>
+            <xs:enumeration value="range"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="enunciado">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="¿Cuanto es 2+2?"/>
+            <xs:enumeration value="¿Qué animal es este?"/>
+            <xs:enumeration value="Si un abogado enloquece, ¿pierde el juicio?"/>
+            <xs:enumeration value="¿Cual/es de estas barbies no existe/n?"/>
+            <xs:enumeration value="Seleciona la 3 respuesta"/>
+            <xs:enumeration value="¿En qué año &quot;nació&quot; el html?"/>
+            <xs:enumeration value="¿Cual de estos dinosaurios jamás existieron?"/>
+            <xs:enumeration value="On"/>
+            <xs:enumeration value="¿Donde hay más pescados?"/>
+            <xs:enumeration value="Última prueba. Es una prueba de habilidad, ajusta la barra de abajo a la posición 468."/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="img" maxOccurs="unbounded" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="img/jirafa.jpg"/>
+            <xs:enumeration value="img/jirafa_ans.jpg"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="respuestaType" name="respuesta" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
 </xs:schema>

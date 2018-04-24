@@ -1,26 +1,10 @@
-<?xml encoding="UTF-8"?>
-
-<!ELEMENT preguntas (pregunta)+>
-<!ATTLIST preguntas
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT pregunta (tipo,enunciado,img*,respuesta+)>
-<!ATTLIST pregunta
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT tipo (#PCDATA)>
-<!ATTLIST tipo
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT enunciado (#PCDATA)>
-<!ATTLIST enunciado
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT img (#PCDATA)>
-<!ATTLIST img
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT respuesta (#PCDATA)>
-<!ATTLIST respuesta
-  xmlns CDATA #FIXED ''
-  correcto NMTOKEN #IMPLIED>
+<!DOCTYPE preguntas [
+        <!ELEMENT preguntas (pregunta)*>
+        <!ELEMENT pregunta (tipo|enunciado|respuesta|img)*>
+        <!ELEMENT tipo (#PCDATA)>
+        <!ELEMENT enunciado (#PCDATA)>
+        <!ELEMENT respuesta (#PCDATA)>
+        <!ATTLIST respuesta
+                correcto CDATA #IMPLIED>
+        <!ELEMENT img (#PCDATA)>
+]>
