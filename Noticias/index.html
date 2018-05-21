@@ -1,47 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://api.rss2json.com/v1/api.json"></script>
-    <script>
-
-    // http://feeds.weblogssl.com/xataka2
-
-    $(function() {
-
-
-        var people = [];
-
-        $.getJSON('Json/noticias.json', function(data) {
-            $.each(data.person, function(i, f) {
-                var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-                    "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-                $(tblRow).appendTo("#userdata tbody");
-            });
-
-        });
-
-    });
-</script>
+    <meta name="viewoport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Noticias</title>
 </head>
 <body>
-<table id= "userdata" border="2">
-    <thead>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email Address</th>
-    <th>City</th>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
-<div id="demo"></div>
-<script>
-    var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
-    document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
-</script>
+<div class="container">
+    <div class="row">
+        <div id="titulo" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">titulo</div>
+    </div>
+    <div class="row">
+        <!--noticias-->
+        <div id="noticias" class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <div class="noticia">noticia1</div>
+            <div class="noticia">noticia2</div>
+        </div>
+            <!--publicidad-->
+        <div id="publicidad" class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">publicidad</div>
+    </div>
 
+</div>
+
+
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 </body>
 </html>

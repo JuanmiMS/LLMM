@@ -1,0 +1,30 @@
+#noticias{
+    /*background-color: red;*/
+    min-height: 150px;
+}
+
+#titulo{
+    background-color: #005cbf;
+    min-height: 150px;
+}
+#noticias .noticia{
+    margin-top: 15px;
+    min-height: 200px;
+    background-color: #0c5460;
+}
+
+@media (min-width: 768px){
+    #publicidad{
+        min-height: 150px;
+        right:0;
+        float: right;
+        max-width:300px;
+        display:block;
+    }
+}
+#publicidad{
+    background-color: green;
+    min-height: 150px;
+    margin-top: 15px;
+
+}
