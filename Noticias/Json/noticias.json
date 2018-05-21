@@ -1,22 +1,14 @@
 {
-  "person": [
+  "noticia":[
     {
-      "firstName": "Clark",
-      "lastName": "Kent",
-      "job": "Reporter",
-      "roll": 20
+      "Titulo": "Noticia 1",
+      "Cuerpo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.leer más.",
+      "Noticia": "aaaaaaaaaaaaaaaaaaaaaaaaaa"
     },
     {
-      "firstName": "Bruce",
-      "lastName": "Wayne",
-      "job": "Playboy",
-      "roll": 30
-    },
-    {
-      "firstName": "Peter",
-      "lastName": "Parker",
-      "job": "Photographer",
-      "roll": 40
+      "Titulo": "Noticia 2",
+      "Cuerpo": "lorem ipsum",
+      "Noticia": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
     }
   ]
 }

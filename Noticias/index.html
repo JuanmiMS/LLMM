@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewoport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie-edge">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Noticias</title>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div id="titulo" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">titulo</div>
-    </div>
-    <div class="row">
-        <!--noticias-->
-        <div id="noticias" class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-            <div class="noticia">noticia1</div>
-            <div class="noticia">noticia2</div>
-        </div>
-            <!--publicidad-->
-        <div id="publicidad" class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">publicidad</div>
-    </div>
 
+<div id="titulo" class="container-fluid">
+hola
 </div>
 
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-10 text-left">
+            <div class="noticia">
+            <h1>NOTICIA 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="index.html">leer más.</a></p>
+            </div>
+            <div class="noticia">
+            <h1>NOTICIA 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="index.html">leer más.</a></p>
+            </div>
 
-<script src="js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        </div>
+        <div id="publicidad" class="col-sm-2 sidenav">
+            <div class="well">
+                <p>PUBLICIDAD</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid text-center">
+    <p>FOOTER</p>
+</footer>
+
 </body>
 </html>

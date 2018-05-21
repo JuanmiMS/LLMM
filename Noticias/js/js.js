@@ -1,10 +1,24 @@
-function parseRSS(url, callback) {
-    $.ajax({
-        url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-        dataType: 'json',
-        success: function(data) {
-            callback(data.responseData.feed);
-        }
-    });
-}
+$(document).ready(function () {
 
+        var showData = $('#show-data');
+
+        console.log("HEEE");
+        $.getJSON('example.json', function (data) {
+            console.log(data);
+
+            var items = data.items.map(function (item) {
+                return item.key + ': ' + item.value;
+            });
+
+            showData.empty();
+
+            if (items.length) {
+                var content = '<li>' + items.join('</li><li>') + '</li>';
+                var list = $('<ul />').html(content);
+                showData.append(list);
+            }
+        });
+
+        showData.text('Loading the JSON file.');
+
+});

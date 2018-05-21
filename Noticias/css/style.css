@@ -1,30 +1,52 @@
-#noticias{
-    /*background-color: red;*/
-    min-height: 150px;
-}
-
 #titulo{
-    background-color: #005cbf;
+    background-color: #0c5460;
     min-height: 150px;
 }
-#noticias .noticia{
-    margin-top: 15px;
-    min-height: 200px;
-    background-color: #0c5460;
+
+.noticia{
+    border: 1px solid #9c9c9c;
+    background-color: ghostwhite;
+    margin-top: 10px;
 }
 
-@media (min-width: 768px){
+.noticia h1{margin: 10px;}
+.noticia p{margin: 10px;}
+
+@media (max-width: 768px){
     #publicidad{
-        min-height: 150px;
-        right:0;
-        float: right;
-        max-width:300px;
-        display:block;
+        min-width: 300px;
     }
 }
-#publicidad{
-    background-color: green;
-    min-height: 150px;
-    margin-top: 15px;
 
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;}
 }
