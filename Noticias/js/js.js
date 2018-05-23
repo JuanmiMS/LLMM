@@ -11,7 +11,6 @@ $.getJSON('Json/noticias.json', function(data) {
 function addNoticia(){
     if(countNoticia<totalNoticias){
         $.getJSON('Json/noticias.json', function(data) {
-            console.log(data.noticia[countNoticia]['Titulo']);
 
             var noticias = document.getElementById('noticias');
             var div = document.createElement('div');
@@ -39,13 +38,22 @@ function addNoticia(){
             noti.innerHTML = data.noticia[countNoticia]['Noticia'];
             div.appendChild(noti);
 
-
             countNoticia++;
         });
     }
 
+    //TODO arreglar fin de pagina
     else{
-        console.log("TODAS LAS NOTICIAS LEIDAS")
+        console.log("TODAS LAS NOTICIAS LEIDAS");
+
+        var fin = document.getElementById('noticias');
+        var div2 = document.createElement('div');
+        div2.setAttribute('class','noticia');
+        fin.appendChild(div2);
+
+        var titulo2 = document.createElement('h1');
+        titulo2.innerHTML = "TODAS LAS NOTICIAS CARGADAS";
+        div2.appendChild(titulo2);
     }
 
 }
@@ -62,12 +70,13 @@ function desplegar(des){
     }
 }
 
+
 $(document).ready(function() {
     var win = $(window);
 
 
     //Rellenamos la web de noticias cuando el usuario la carga
-    if (($(document).height() === win.height())) {
+    if (($(document).height() - win.height()) <= win.scrollTop()) {
         addNoticia();
     }
 
