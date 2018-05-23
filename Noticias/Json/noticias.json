@@ -1,17 +1,17 @@
 {
   "noticia":[
     {
-      "Titulo": "Noticia 1",
+      "Titulo": "Noticia 3",
       "Cuerpo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.leer más.",
-      "Noticia": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "Imagen": "gola"
+      "Noticia": "AAAAALorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint ",
+      "Imagen": "img/wall.jpg"
 
     },
     {
-      "Titulo": "Noticia 2",
+      "Titulo": "Noticia 4",
       "Cuerpo": "lorem ipsum",
-      "Noticia": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-      "Imagen": "gola"
+      "Noticia": "BBBBLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint ",
+      "Imagen": "img/wall.jpg"
     }
   ]
 }
