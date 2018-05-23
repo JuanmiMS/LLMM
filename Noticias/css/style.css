@@ -9,10 +9,16 @@
     margin-top: 10px;
 }
 
+.noticia img{
+    float: left;
+    width: 130px;
+    margin: 10px;
+}
+
 .noticia h1{margin: 10px;}
 .noticia p{margin: 10px;}
 
-@media (max-width: 768px){
+@media (min-width: 768px){
     #publicidad{
         min-width: 300px;
     }
