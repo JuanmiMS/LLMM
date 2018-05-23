@@ -63,15 +63,22 @@ $(function () {
     })
 });
 
-//cargar scroll
+
+
 $(document).ready(function() {
     var win = $(window);
 
-    // Each time the user scrolls
+
+    //Rellenamos la web de noticias cuando el usuario la carga
+    if (($(document).height() - win.height()) === win.scrollTop()) {
+        addNoticia();
+    }
+
+    //Cada vez que llega al final de la web, carga una noticia más
     win.scroll(function() {
-        // End of the document reached?
-        if (($(document).height() - win.height()) === win.scrollTop()-10200) {
+        if (($(document).height() - win.height()) === win.scrollTop()) {
             addNoticia();
         }
+
     });
 });
