@@ -16,27 +16,30 @@ function addNoticia(){
             var noticias = document.getElementById('noticias');
             var div = document.createElement('div');
             div.setAttribute('class','noticia');
+            div.setAttribute('onclick','desplegar(this)');
             noticias.appendChild(div);
-
-            var titulo = document.createElement('h1');
-            titulo.innerHTML = data.noticia[countNoticia]['Titulo'];
-            noticias.appendChild(titulo);
-
-            var cuerpo = document.createElement('p');
-            cuerpo.innerHTML = data.noticia[countNoticia]['Cuerpo'];
-            noticias.appendChild(cuerpo);
-
-            var noti = document.createElement('p');
-            noti.setAttribute('class','oculto');
-            noti.setAttribute('display','none');
-            noti.innerHTML = data.noticia[countNoticia]['Noticia'];
-            noticias.appendChild(noti);
 
             var img = document.createElement('img');
             img.setAttribute('src', data.noticia[countNoticia]['Imagen']);
             img.setAttribute('class','img-fluid');
             img.setAttribute('alt','pato');
-            noticias.appendChild(img);
+            div.appendChild(img);
+
+            var titulo = document.createElement('h1');
+            titulo.innerHTML = data.noticia[countNoticia]['Titulo'];
+            div.appendChild(titulo);
+
+            var cuerpo = document.createElement('p');
+            cuerpo.innerHTML = data.noticia[countNoticia]['Cuerpo'];
+            div.appendChild(cuerpo);
+
+            var noti = document.createElement('p');
+            noti.setAttribute('class','oculto');
+            noti.setAttribute('style','display: none');
+            noti.innerHTML = data.noticia[countNoticia]['Noticia'];
+            div.appendChild(noti);
+
+
             countNoticia++;
         });
     }
@@ -48,27 +51,23 @@ function addNoticia(){
 }
 
 
-//Función encargada de desplegar/encoger la noticia
-$(function () {
-    $('.noticia').click(function () {
-
-        if($('.oculto', this).is(':visible'))
-        {
-            $('.oculto', this).slideUp();
-        }
-        else{
-            $('.oculto', this).slideDown();
-        }
-    })
-});
-
+function desplegar(des){
+    console.log("entra");
+    if($('.oculto', des).is(':visible'))
+    {
+        $('.oculto', des).slideUp();
+    }
+    else{
+        $('.oculto', des).slideDown();
+    }
+}
 
 $(document).ready(function() {
     var win = $(window);
 
 
     //Rellenamos la web de noticias cuando el usuario la carga
-    if (($(document).height() - win.height()) === win.scrollTop()) {
+    if (($(document).height() === win.height())) {
         addNoticia();
     }
 
