@@ -37,7 +37,6 @@ function addNoticia(){
             img.setAttribute('class','img-fluid');
             img.setAttribute('alt','pato');
             noticias.appendChild(img);
-
             countNoticia++;
         });
     }
@@ -49,7 +48,7 @@ function addNoticia(){
 }
 
 
-//Función encargada de desplegar la noticia
+//Función encargada de desplegar/encoger la noticia
 $(function () {
     $('.noticia').click(function () {
 
@@ -62,7 +61,6 @@ $(function () {
         }
     })
 });
-
 
 
 $(document).ready(function() {
