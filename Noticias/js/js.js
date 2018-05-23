@@ -12,13 +12,6 @@ function addNoticia(){
     if(countNoticia<totalNoticias){
         $.getJSON('Json/noticias.json', function(data) {
             console.log(data.noticia[countNoticia]['Titulo']);
-            // <div class="noticia">
-        // <img src="img/wall.jpg" class="img-fluid" alt="Pato">
-        // <h1>NOTICIA 2</h1>
-        // <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        // </p>
-        // <p class="oculto" style="display: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        // </div>
 
             var noticias = document.getElementById('noticias');
             var div = document.createElement('div');
@@ -70,5 +63,15 @@ $(function () {
     })
 });
 
+//cargar scroll
+$(document).ready(function() {
+    var win = $(window);
 
-
+    // Each time the user scrolls
+    win.scroll(function() {
+        // End of the document reached?
+        if (($(document).height() - win.height()) === win.scrollTop()-10200) {
+            addNoticia();
+        }
+    });
+});
