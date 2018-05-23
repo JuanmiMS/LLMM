@@ -8,7 +8,7 @@ $.getJSON('Json/noticias.json', function(data) {
 });
 
 $(function () {
-    $('.noticia', this).click(function () {
+    $('.noticia').click(function () {
 
         if($('.oculto', this).is(':visible'))
         {
@@ -19,7 +19,7 @@ $(function () {
         }
 
     })
-})
+});
 
 
 
