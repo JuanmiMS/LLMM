@@ -7,22 +7,19 @@ $.getJSON('Json/noticias.json', function(data) {
 
 });
 
-$('#desplegar').toggle(
+$(function () {
+    $('.noticia', this).click(function () {
 
-    // Primer click
-    function(e){
-        $('#respuesta-ej5').slideDown();
-        $(this).text('Leer mas');
-        e.preventDefault();
-    }, // Separamos las dos funciones con una coma
+        if($('.oculto', this).is(':visible'))
+        {
+            $('.oculto', this).slideUp();
+        }
+        else{
+            $('.oculto', this).slideDown();
+        }
 
-    // Segundo click
-    function(e){
-        $('#respuesta-ej5').slideUp();
-        $(this).text('Leer menos');
-        e.preventDefault();
-    }
+    })
+})
 
-);
 
 
