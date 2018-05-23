@@ -1,10 +1,27 @@
+var noticia = 0;
+var totalNoticias =0;
+
 // Lee json
 $.getJSON('Json/noticias.json', function(data) {
     $.each(data.noticia, function(i, f) {
-        printNew(f.Titulo, f.cuerpo, f.Noticia, f.Imagen)
+        totalNoticias++;
     });
-
 });
+
+
+function addNoticia(){
+    if(noticia<totalNoticias){
+        $.getJSON('Json/noticias.json', function(data) {
+            console.log(data.noticia[noticia]['Titulo'])
+            noticia++;
+        });
+    }
+
+    else{
+        console.log("TODAS LAS NOTICIAS LEIDAS")
+    }
+}
+
 
 //Función encargada de desplegar la noticia
 $(function () {
@@ -19,11 +36,6 @@ $(function () {
         }
     })
 });
-
-function printNew(titulo, introduccion, texto, imagen) {
-console.log("Titulo: "+titulo +"Introducción: "+introduccion+
-    "Texto entero: "+texto+"IMG: "+imagen)
-}
 
 
 
