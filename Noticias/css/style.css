@@ -116,3 +116,9 @@
 #titulo img {
     height: 300px;
 }
+
+#btndisclaimer {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
