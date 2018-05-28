@@ -46,14 +46,14 @@ function addNoticia(){
     else{
         console.log("TODAS LAS NOTICIAS LEIDAS");
 
-        var fin = document.getElementById('noticias');
-        var div2 = document.createElement('div');
-        div2.setAttribute('class','noticia');
-        fin.appendChild(div2);
-
-        var titulo2 = document.createElement('h1');
-        titulo2.innerHTML = "TODAS LAS NOTICIAS CARGADAS";
-        div2.appendChild(titulo2);
+        // var fin = document.getElementById('noticias');
+        // var div2 = document.createElement('div');
+        // div2.setAttribute('class','noticia');
+        // fin.appendChild(div2);
+        //
+        // var titulo2 = document.createElement('h1');
+        // titulo2.innerHTML = "TODAS LAS NOTICIAS CARGADAS";
+        // div2.appendChild(titulo2);
     }
 
 }
@@ -72,19 +72,10 @@ function desplegar(des){
 
 
 $(document).ready(function() {
-    var win = $(window);
 
-
-    //Rellenamos la web de noticias cuando el usuario la carga
-    if (($(document).height() - win.height()) <= win.scrollTop()) {
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
         addNoticia();
-    }
-
-    //Cada vez que llega al final de la web, carga una noticia más
-    win.scroll(function() {
-        if (($(document).height() - win.height()) === win.scrollTop()) {
-            addNoticia();
-        }
-
     });
+
 });
