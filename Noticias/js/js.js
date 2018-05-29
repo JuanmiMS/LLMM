@@ -74,6 +74,10 @@ function mostrar(des) {
 
 }
 
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 $(document).ready(function () {
 
