@@ -3,8 +3,9 @@ html{
     font-size: medium;
 }
 #titulo{
-    background-color: #0c5460;
+    background-color: #9fcdff;
     min-height: 150px;
+    font-weight: bold;
 }
 
 #ads{
@@ -12,14 +13,17 @@ html{
 }
 
 .noticia{
-    border: 1px solid #9c9c9c;
+    border: 1px solid #4e555b;
     background-color: ghostwhite;
     margin-top: 10px;
+    float: right;
 }
 
 .noticia img{
-    width: 130px;
-    margin: 10px;
+    float: right;
+    width: 40%;
+    margin: 1%;
+    margin-top: 3%;
 }
 
 .noticia h1{margin: 10px;}
@@ -35,7 +39,7 @@ html{
 
 .sidenav {
     padding-top: 20px;
-    background-color: #f1f1f1;
+    background-color: #9c9c9c;
     height: 100%;
 }
 
@@ -130,7 +134,7 @@ html{
     bottom: 50px;
 }
 #btnUP {
-    display: none;
+    /*display: none;*/
     position: fixed;
     right: 150px;
     bottom: 50px;

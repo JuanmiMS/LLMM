@@ -9,11 +9,6 @@ $.getJSON('Json/noticias.json', function (data) {
 });
 
 
-$(function () {
-
-});
-
-
 function addNoticia() {
     if (countNoticia < totalNoticias) {
         $.getJSON('Json/noticias.json', function (data) {
@@ -26,7 +21,7 @@ function addNoticia() {
 
             var img = document.createElement('img');
             img.setAttribute('src', data.noticia[countNoticia]['Imagen']);
-            img.setAttribute('class', 'img-fluid');
+            img.setAttribute('class', 'img-responsive');
             img.setAttribute('alt', 'pato');
             div.appendChild(img);
 
@@ -38,11 +33,27 @@ function addNoticia() {
             cuerpo.innerHTML = data.noticia[countNoticia]['Cuerpo'];
             div.appendChild(cuerpo);
 
+            var divCom = document.createElement('div');
+            divCom.setAttribute('class', 'noticiaCompleta');
+            divCom.setAttribute('style', 'display: none');
+            div.appendChild(divCom);
+
+            var imgCom = document.createElement('img');
+            imgCom.setAttribute('src', data.noticia[countNoticia]['Imagen']);
+            imgCom.setAttribute('class', 'img-responsive');
+            imgCom.setAttribute('style','width: 20%; float: left;');
+            imgCom.setAttribute('alt', 'pato');
+            divCom.appendChild(imgCom);
+
+
+            var tituloComp = document.createElement('h1');
+            titulo.innerHTML = data.noticia[countNoticia]['Titulo'];
+            divCom.appendChild(tituloComp);
+
+
             var noti = document.createElement('p');
-            noti.setAttribute('class', 'noticiaCompleta');
-            noti.setAttribute('style', 'display: none');
             noti.innerHTML = data.noticia[countNoticia]['Noticia'];
-            div.appendChild(noti);
+            divCom.appendChild(noti);
 
             countNoticia++;
         });
@@ -57,21 +68,16 @@ function addNoticia() {
 
 //TODO fix abrir 2
 function mostrar(des) {
-    if ($('.noticiaCompleta', des).is(':visible')) {
-        $( ".noticiaCompleta", des).dialog('close');
-
-    }
-    else {
-        $( ".noticiaCompleta", des).dialog({
-            minHeight: $( window ).height() -500,
-            minWidth: $( window ).width() -500,
-            show: 'fade', hide: 'drop',
-        });
-
-        $( ".noticiaCompleta", des).dialog(open);
-    }
-
-
+    $(".noticiaCompleta", des).dialog({
+        minHeight: $(window).height() - 500,
+        minWidth: $(window).width() - 500,
+        show: {
+            effect: "blind",
+            duration: 500
+        },
+        hide: 'drop',
+    });
+    $(".noticiaCompleta", des).dialog('open');
 }
 
 function topFunction() {
