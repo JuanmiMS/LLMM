@@ -1,27 +1,33 @@
 var countNoticia = 0;
-var totalNoticias =0;
+var totalNoticias = 0;
 
 // Lee json
-$.getJSON('Json/noticias.json', function(data) {
-    $.each(data.noticia, function(i, f) {
+$.getJSON('Json/noticias.json', function (data) {
+    $.each(data.noticia, function (i, f) {
         totalNoticias++;
     });
 });
 
-function addNoticia(){
-    if(countNoticia<totalNoticias){
-        $.getJSON('Json/noticias.json', function(data) {
+
+$(function () {
+
+});
+
+
+function addNoticia() {
+    if (countNoticia < totalNoticias) {
+        $.getJSON('Json/noticias.json', function (data) {
 
             var noticias = document.getElementById('noticias');
             var div = document.createElement('div');
-            div.setAttribute('class','noticia');
-            div.setAttribute('onclick','desplegar(this)');
+            div.setAttribute('class', 'noticia col');
+            div.setAttribute('onclick', 'mostrar(this)');
             noticias.appendChild(div);
 
             var img = document.createElement('img');
             img.setAttribute('src', data.noticia[countNoticia]['Imagen']);
-            img.setAttribute('class','img-fluid');
-            img.setAttribute('alt','pato');
+            img.setAttribute('class', 'img-fluid');
+            img.setAttribute('alt', 'pato');
             div.appendChild(img);
 
             var titulo = document.createElement('h1');
@@ -33,8 +39,8 @@ function addNoticia(){
             div.appendChild(cuerpo);
 
             var noti = document.createElement('p');
-            noti.setAttribute('class','oculto');
-            noti.setAttribute('style','display: none');
+            noti.setAttribute('class', 'noticiaCompleta');
+            noti.setAttribute('style', 'display: none');
             noti.innerHTML = data.noticia[countNoticia]['Noticia'];
             div.appendChild(noti);
 
@@ -43,38 +49,36 @@ function addNoticia(){
     }
 
     //TODO arreglar fin de pagina
-    else{
+    else {
         console.log("TODAS LAS NOTICIAS LEIDAS");
-
-        // var fin = document.getElementById('noticias');
-        // var div2 = document.createElement('div');
-        // div2.setAttribute('class','noticia');
-        // fin.appendChild(div2);
-        //
-        // var titulo2 = document.createElement('h1');
-        // titulo2.innerHTML = "TODAS LAS NOTICIAS CARGADAS";
-        // div2.appendChild(titulo2);
     }
 
 }
 
+//TODO fix abrir 2
+function mostrar(des) {
+    if ($('.noticiaCompleta', des).is(':visible')) {
+        $( ".noticiaCompleta", des).dialog('close');
 
-function desplegar(des){
-    console.log("entra");
-    if($('.oculto', des).is(':visible'))
-    {
-        $('.oculto', des).slideUp();
     }
-    else{
-        $('.oculto', des).slideDown();
+    else {
+        $( ".noticiaCompleta", des).dialog({
+            minHeight: $( window ).height() -500,
+            minWidth: $( window ).width() -500,
+            show: 'fade', hide: 'drop',
+        });
+
+        $( ".noticiaCompleta", des).dialog(open);
     }
+
+
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     /* Every time the window is scrolled ... */
-    $(window).scroll( function(){
+    $(window).scroll(function () {
         addNoticia();
     });
 
