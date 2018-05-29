@@ -45,15 +45,8 @@ function addNoticia(){
     //TODO arreglar fin de pagina
     else{
         console.log("TODAS LAS NOTICIAS LEIDAS");
-
-        // var fin = document.getElementById('noticias');
-        // var div2 = document.createElement('div');
-        // div2.setAttribute('class','noticia');
-        // fin.appendChild(div2);
-        //
-        // var titulo2 = document.createElement('h1');
-        // titulo2.innerHTML = "TODAS LAS NOTICIAS CARGADAS";
-        // div2.appendChild(titulo2);
+        $('#btndisclaimer').css('display','none');
+        $('#btnUP').css('display','block');
     }
 
 }
@@ -70,6 +63,10 @@ function desplegar(des){
     }
 }
 
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 $(document).ready(function() {
 

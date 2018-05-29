@@ -1,3 +1,6 @@
+*{
+    font-size: large;
+}
 #titulo{
     background-color: #0c5460;
     min-height: 150px;
@@ -120,5 +123,11 @@
 #btndisclaimer {
     position: fixed;
     right: 50px;
+    bottom: 50px;
+}
+#btnUP {
+    display: none;
+    position: fixed;
+    right: 150px;
     bottom: 50px;
 }
