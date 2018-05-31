@@ -10,6 +10,7 @@ $.getJSON('Json/noticias.json', function (data) {
 
 
 function addNoticia() {
+
     if (countNoticia < totalNoticias) {
         $.getJSON('Json/noticias.json', function (data) {
 
@@ -78,6 +79,7 @@ function mostrar(des) {
         hide: 'drop',
     });
     $(".noticiaCompleta", des).dialog('open');
+
 }
 
 function topFunction() {
