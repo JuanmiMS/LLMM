@@ -17,6 +17,7 @@ html{
     background-color: ghostwhite;
     margin-top: 10px;
     float: right;
+    margin-left: 10px;
 }
 
 .noticia img{
@@ -125,7 +126,7 @@ html{
 }
 
 #titulo img {
-    height: 300px;
+    margin-top: 50px;
 }
 
 #btndisclaimer {

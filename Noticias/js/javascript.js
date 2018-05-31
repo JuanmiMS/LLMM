@@ -41,7 +41,7 @@ function addNoticia() {
             var imgCom = document.createElement('img');
             imgCom.setAttribute('src', data.noticia[countNoticia]['Imagen']);
             imgCom.setAttribute('class', 'img-responsive');
-            imgCom.setAttribute('style','width: 20%; float: left;');
+            imgCom.setAttribute('style','float: left;');
             imgCom.setAttribute('alt', 'pato');
             divCom.appendChild(imgCom);
 
@@ -70,7 +70,7 @@ function addNoticia() {
 function mostrar(des) {
     $(".noticiaCompleta", des).dialog({
         minHeight: $(window).height() - 500,
-        minWidth: $(window).width() - 500,
+        minWidth: $(window).width() - 800,
         show: {
             effect: "blind",
             duration: 500
